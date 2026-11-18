@@ -170,6 +170,26 @@ content:
           - name: visible
             label: Hiển thị
             type: boolean
+      - name: situations
+        label: Năm tình huống định kiến
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Câu hỏi tình huống
+            type: string
+          - name: context
+            label: Bối cảnh
+            type: text
+          - name: explanation
+            label: Giải mã
+            type: text
+          - name: action
+            label: Hành động
+            type: text
+          - name: visible
+            label: Hiển thị
+            type: boolean
       - name: closing
         label: Thông điệp cuối trang
         type: object
