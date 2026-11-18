@@ -1,0 +1,7 @@
+question: "Lựa chọn nghề dựa vào đâu?"
+option_a: "Sở thích, năng lực, điều kiện và yêu cầu nghề"
+option_b: "Chỉ giới tính"
+option_c: "Định kiến bạn bè"
+correct: "A"
+explanation: "Hướng nghiệp dựa trên năng lực và điều kiện thực tế."
+visible: true
