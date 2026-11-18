@@ -3,7 +3,7 @@
   if (!gallery) return;
   async function init() {
     try {
-      const response = await fetch('data/gallery.json');
+      const response = await fetch('data/gallery.json', {cache:'no-cache'});
       if (response.ok) {
         const data = await response.json();
         const items = (data.gallery || []).filter(item => item.visible !== false)
