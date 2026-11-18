@@ -12,7 +12,51 @@
     "comparison_heading": "Bình đẳng giới không phải là…",
     "note": "Khi đăng tải nội dung chính thức, đối chiếu phần khái niệm với Điều 5 Luật Bình đẳng giới trong văn bản hiện hành.",
     "button_label": "Thử sức với 10 câu hỏi",
-    "button_url": "../thu-thach/"
+    "button_url": "../thu-thach/",
+    "concepts": [
+      {
+        "title": "Giới tính",
+        "description": "Những đặc điểm sinh học của nam và nữ; khác với vai trò, kỳ vọng xã hội.",
+        "visible": true
+      },
+      {
+        "title": "Giới",
+        "description": "Những đặc điểm, vị trí và vai trò của nam và nữ trong các mối quan hệ xã hội.",
+        "visible": true
+      },
+      {
+        "title": "Định kiến giới",
+        "description": "Cách nhìn nhận, đánh giá thiên lệch, tiêu cực về đặc điểm, vai trò, năng lực của nam hoặc nữ.",
+        "visible": true
+      },
+      {
+        "title": "Bình đẳng giới",
+        "description": "Nam và nữ có vị trí, vai trò ngang nhau, có điều kiện và cơ hội phát huy năng lực, đóng góp và thụ hưởng thành quả phát triển.",
+        "visible": true
+      }
+    ],
+    "comparisons": [
+      {
+        "misconception": "Nam và nữ phải làm mọi việc giống hệt nhau",
+        "correct": "Tôn trọng khác biệt, tạo cơ hội công bằng.",
+        "visible": true
+      },
+      {
+        "misconception": "Bình đẳng là chỉ ưu tiên con gái",
+        "correct": "Không phân biệt đối xử; hỗ trợ phù hợp khi cần.",
+        "visible": true
+      },
+      {
+        "misconception": "Con trai không cần học việc nhà",
+        "correct": "Mọi thành viên đều có trách nhiệm chia sẻ.",
+        "visible": true
+      },
+      {
+        "misconception": "Nghề nghiệp có giới tính",
+        "correct": "Lựa chọn theo năng lực, sở thích và yêu cầu thực tế.",
+        "visible": true
+      }
+    ]
   },
   "legal": {
     "eyebrow": "CHƯƠNG 06 · PHÁP LUẬT BẢO VỆ CHÚNG TA",
@@ -20,7 +64,21 @@
     "lead": "Mỗi học sinh đều xứng đáng được tôn trọng, học tập và phát triển năng lực. Hiểu biết pháp luật giúp chúng ta tôn trọng quyền người khác, nhận diện hành vi không phù hợp và tìm hỗ trợ khi cần.",
     "notice": "Nội dung dưới đây được diễn giải ngắn gọn dành cho học sinh. Khi cần áp dụng hoặc trích dẫn chính thức, hãy đọc toàn văn văn bản pháp luật tại nguồn được liên kết.",
     "more_heading": "Tìm hiểu thêm",
-    "more_note": "Văn bản hợp nhất 45/VBHN-VPQH năm 2026 cập nhật sửa đổi có hiệu lực từ 01/07/2026. Cần kiểm tra lại tình trạng hiệu lực và điều khoản cụ thể trước mỗi lần tái sử dụng."
+    "more_note": "Văn bản hợp nhất 45/VBHN-VPQH năm 2026 cập nhật sửa đổi có hiệu lực từ 01/07/2026. Cần kiểm tra lại tình trạng hiệu lực và điều khoản cụ thể trước mỗi lần tái sử dụng.",
+    "more_links": [
+      {
+        "label": "Nghị định 76/2026/NĐ-CP",
+        "description": " – sửa đổi quy định xử phạt vi phạm hành chính trong lĩnh vực bình đẳng giới.",
+        "url": "https://vanban.chinhphu.vn/?docid=217214&pageid=27160",
+        "visible": true
+      },
+      {
+        "label": "Nghị quyết 28/NQ-CP năm 2021",
+        "description": " – Chiến lược quốc gia về bình đẳng giới giai đoạn 2021–2030.",
+        "url": "https://vanban.chinhphu.vn/?docid=202742&pageid=27160",
+        "visible": true
+      }
+    ]
   },
   "quiz": {
     "eyebrow": "CHƯƠNG 07 · TỰ KIỂM TRA",
