@@ -18,27 +18,41 @@
     text('main > h1', item.title);
     text('main > .article-lead', item.lead);
     if (path === 'knowledge') {
-      const paragraphs = [...document.querySelectorAll('.knowledge-page > p:not(.article-lead):not(.illustrative-note)')];
-      (item.paragraphs || []).forEach((value, index) => { if (paragraphs[index]) paragraphs[index].textContent = value; });
+      const firstHeading = document.querySelector('.knowledge-page > h2');
+      document.querySelectorAll('.knowledge-page > p:not(.article-lead):not(.illustrative-note)').forEach(node=>node.remove());
+      (item.paragraphs || []).forEach(value=>{
+        const paragraph=document.createElement('p');paragraph.textContent=value;
+        if(firstHeading)firstHeading.before(paragraph);
+      });
       text('.knowledge-page > h2:nth-of-type(1)', item.concept_heading);
       text('.knowledge-page > h2:nth-of-type(2)', item.comparison_heading);
       text('.knowledge-page > .illustrative-note', item.note);
-      const conceptCards = [...document.querySelectorAll('.knowledge-concepts .concept-card')];
-      (item.concepts || []).forEach((entry, index) => {
-        const card = conceptCards[index]; if (!card) return;
-        card.hidden = entry.visible === false;
-        const title = card.querySelector('.concept-title'), icon = title?.querySelector('.concept-icon'), description = card.querySelector('p');
-        if (title && entry.title) { title.textContent = ''; if (icon) title.append(icon); title.append(document.createTextNode(entry.title)); }
-        if (description) description.textContent = entry.description || '';
-      });
-      const comparisons = [...document.querySelectorAll('.knowledge-page .compare-card')];
-      (item.comparisons || []).forEach((entry, index) => {
-        const card = comparisons[index]; if (!card) return;
-        card.hidden = entry.visible === false;
-        const title = card.querySelector('h3'), correct = card.querySelector('.right-view');
-        if (title) title.textContent = entry.misconception || '';
-        if (correct) correct.textContent = entry.correct || '';
-      });
+      const conceptGrid=document.querySelector('.knowledge-concepts');
+      const conceptTemplate=conceptGrid?.querySelector('.concept-card');
+      if(conceptGrid && conceptTemplate) {
+        (item.concepts || []).forEach((entry,index)=>{
+          let card=conceptGrid.querySelectorAll('.concept-card')[index];
+          if(!card){card=conceptTemplate.cloneNode(true);conceptGrid.append(card);}
+          card.hidden=entry.visible===false;
+          const title=card.querySelector('.concept-title'),icon=title?.querySelector('.concept-icon'),description=card.querySelector('p');
+          if(title && entry.title){title.replaceChildren();if(icon)title.append(icon);title.append(document.createTextNode(entry.title));}
+          if(description)description.textContent=entry.description||'';
+        });
+        [...conceptGrid.querySelectorAll('.concept-card')].forEach((card,index)=>{if(index>=(item.concepts||[]).length)card.hidden=true;});
+      }
+      const compareGrid=document.querySelector('.knowledge-page .compare-grid');
+      const compareTemplate=compareGrid?.querySelector('.compare-card');
+      if(compareGrid && compareTemplate) {
+        (item.comparisons || []).forEach((entry,index)=>{
+          let card=compareGrid.querySelectorAll('.compare-card')[index];
+          if(!card){card=compareTemplate.cloneNode(true);compareGrid.append(card);}
+          card.hidden=entry.visible===false;
+          const title=card.querySelector('h3'),correct=card.querySelector('.right-view');
+          if(title)title.textContent=entry.misconception||'';
+          if(correct)correct.textContent=entry.correct||'';
+        });
+        [...compareGrid.querySelectorAll('.compare-card')].forEach((card,index)=>{if(index>=(item.comparisons||[]).length)card.hidden=true;});
+      }
       const button = document.querySelector('.knowledge-page > .button');
       if (button) { button.textContent = (item.button_label || 'Thử sức') + ' ↗'; if (item.button_url) button.href = item.button_url; }
     }
