@@ -1,0 +1,96 @@
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+  - name: site
+    label: Cấu hình website
+    type: file
+    path: data/site.yml
+    format: yaml
+    fields:
+      - name: name
+        label: Tên website
+        type: string
+      - name: slogan
+        label: Slogan
+        type: string
+      - name: description
+        label: Mô tả
+        type: text
+
+  - name: homepage
+    label: Trang chủ
+    type: file
+    path: data/homepage.yml
+    format: yaml
+    fields:
+      - name: intro_title
+        label: Tiêu đề giới thiệu
+        type: string
+      - name: intro_text
+        label: Nội dung giới thiệu
+        type: text
+      - name: hero_slides
+        label: Ảnh trình chiếu
+        type: image
+        list: true
+
+  - name: sections
+    label: Tám nội dung
+    type: collection
+    path: data/sections
+    filename: "{primary}.yml"
+    format: yaml
+    fields:
+      - name: number
+        label: Số thứ tự
+        type: number
+      - name: title
+        label: Tiêu đề
+        type: string
+      - name: slug
+        label: Đường dẫn
+        type: string
+      - name: intro
+        label: Giới thiệu
+        type: text
+      - name: visible
+        label: Hiển thị
+        type: boolean
+    operations:
+      delete: false
+
+  - name: challenge
+    label: Thử thách 7 ngày
+    type: file
+    path: data/challenge/days.yml
+    format: yaml
+    fields:
+      - name: days
+        label: Các ngày thử thách
+        type: object
+        list: true
+        fields:
+          - name: day
+            label: Ngày
+            type: number
+          - name: title
+            label: Nhiệm vụ
+            type: string
+
+  - name: impact
+    label: Dấu ấn thay đổi
+    type: file
+    path: data/impact.yml
+    format: yaml
+    fields:
+      - name: note
+        label: Ghi chú kiểm chứng
+        type: text
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
