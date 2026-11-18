@@ -36,7 +36,7 @@
             const a = document.createElement('a');
             a.textContent = item.label || '';
             const url = String(item.url || '#');
-            a.href = url.startsWith('#') ? url : assetUrl(url);
+            a.href = url.startsWith('#') ? (location.pathname === rootUrl.pathname ? url : rootUrl.href + url) : assetUrl(url);
             nav.append(a);
           });
         }
