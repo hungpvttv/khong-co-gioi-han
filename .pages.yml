@@ -447,6 +447,34 @@ content:
           - name: note
             label: Ghi chú
             type: text
+          - name: concepts
+            label: Các khái niệm
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Tên khái niệm
+                type: string
+              - name: description
+                label: Diễn giải
+                type: text
+              - name: visible
+                label: Hiển thị
+                type: boolean
+          - name: comparisons
+            label: Các thẻ so sánh
+            type: object
+            list: true
+            fields:
+              - name: misconception
+                label: Cách hiểu chưa đúng
+                type: string
+              - name: correct
+                label: Góc nhìn phù hợp
+                type: string
+              - name: visible
+                label: Hiển thị
+                type: boolean
           - name: button_label
             label: Chữ nút
             type: string
@@ -475,6 +503,23 @@ content:
           - name: more_note
             label: Ghi chú cuối trang
             type: text
+          - name: more_links
+            label: Liên kết văn bản tham khảo
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Tên văn bản
+                type: string
+              - name: description
+                label: Diễn giải
+                type: string
+              - name: url
+                label: Liên kết
+                type: string
+              - name: visible
+                label: Hiển thị
+                type: boolean
       - name: quiz
         label: Trang Trắc nghiệm
         type: object
