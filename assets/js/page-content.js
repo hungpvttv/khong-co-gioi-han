@@ -23,6 +23,22 @@
       text('.knowledge-page > h2:nth-of-type(1)', item.concept_heading);
       text('.knowledge-page > h2:nth-of-type(2)', item.comparison_heading);
       text('.knowledge-page > .illustrative-note', item.note);
+      const conceptCards = [...document.querySelectorAll('.knowledge-concepts .concept-card')];
+      (item.concepts || []).forEach((entry, index) => {
+        const card = conceptCards[index]; if (!card) return;
+        card.hidden = entry.visible === false;
+        const title = card.querySelector('.concept-title'), icon = title?.querySelector('.concept-icon'), description = card.querySelector('p');
+        if (title && entry.title) { title.textContent = ''; if (icon) title.append(icon); title.append(document.createTextNode(entry.title)); }
+        if (description) description.textContent = entry.description || '';
+      });
+      const comparisons = [...document.querySelectorAll('.knowledge-page .compare-card')];
+      (item.comparisons || []).forEach((entry, index) => {
+        const card = comparisons[index]; if (!card) return;
+        card.hidden = entry.visible === false;
+        const title = card.querySelector('h3'), correct = card.querySelector('.right-view');
+        if (title) title.textContent = entry.misconception || '';
+        if (correct) correct.textContent = entry.correct || '';
+      });
       const button = document.querySelector('.knowledge-page > .button');
       if (button) { button.textContent = (item.button_label || 'Thử sức') + ' ↗'; if (item.button_url) button.href = item.button_url; }
     }
@@ -30,6 +46,15 @@
       text('.law-page > .notice', item.notice);
       text('.law-more h2', item.more_heading);
       text('.law-more .illustrative-note', item.more_note);
+      const list = document.querySelector('.law-more ul');
+      if (list && Array.isArray(item.more_links)) {
+        list.replaceChildren();
+        item.more_links.filter(entry => entry.visible !== false).forEach(entry => {
+          const li = document.createElement('li'), a = document.createElement('a');
+          a.href = entry.url || '#'; a.target = '_blank'; a.rel = 'noopener';
+          a.textContent = entry.label || ''; li.append(a, document.createTextNode(entry.description || '')); list.append(li);
+        });
+      }
     }
     if (path === 'quiz') {
       text('.quiz-page > .quiz-note', item.note);
