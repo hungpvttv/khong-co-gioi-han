@@ -393,6 +393,9 @@ content:
     path: data/family-article.json
     format: json
     fields:
+      - name: eyebrow
+        label: Dòng nhãn phía trên tiêu đề (để trống nếu không muốn hiển thị)
+        type: string
       - name: title
         label: Tiêu đề
         type: string

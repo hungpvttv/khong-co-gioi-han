@@ -47,11 +47,16 @@
     .then((data) => {
       if (data.visible === false) { main.hidden = true; return; }
 
+      const eyebrow = main.querySelector(':scope > .eyebrow');
       const title = main.querySelector('h1');
       const lead = main.querySelector('.article-lead');
       const hero = main.querySelector('.article-hero');
       const note = main.querySelector('.illustrative-note');
 
+      if (eyebrow) {
+        eyebrow.textContent = data.eyebrow || '';
+        eyebrow.hidden = !data.eyebrow;
+      }
       if (title && data.title) title.textContent = data.title;
       if (lead && data.sapo) lead.textContent = data.sapo;
 
