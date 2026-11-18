@@ -215,5 +215,21 @@
       "action": "Tôn trọng lựa chọn nghề nghiệp.",
       "visible": true
     }
-  ]
+  ],
+  "headings": {
+    "journey_eyebrow": "HÀNH TRÌNH THAY ĐỔI",
+    "journey_title": "5 CHẠM KHÔNG GIỚI HẠN",
+    "journey_description": "Chạm để nhận diện, thấu hiểu, lựa chọn, hành động và lan tỏa.",
+    "doors_eyebrow": "MỞ RA NHỮNG GÓC NHÌN MỚI",
+    "doors_title": "8 cánh cửa – Muôn điều mới lạ",
+    "doors_description": "Mỗi cánh cửa là một cơ hội để hiểu hơn, tôn trọng hơn và cùng nhau thay đổi.",
+    "compare_eyebrow": "KIẾN THỨC TRỰC QUAN",
+    "compare_title": "Bình đẳng giới không phải là…",
+    "compare_description": "Nhận diện những cách hiểu chưa đúng và mở ra góc nhìn phù hợp hơn.",
+    "concepts_title": "4 khái niệm cần biết",
+    "concepts_description": "Bấm vào từng thẻ để mở nội dung.",
+    "gallery_eyebrow": "TRƯỜNG HỌC KHÔNG GIỚI HẠN",
+    "gallery_title": "Cùng học hỏi và khám phá khả năng",
+    "gallery_description": "Mỗi học sinh đều có cơ hội tham gia, thể hiện ý tưởng và phát triển năng lực."
+  }
 }
