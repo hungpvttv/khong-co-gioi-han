@@ -42,5 +42,11 @@
     }
   ],
   "illustrative_note": "(Ba câu chuyện là tình huống minh họa phục vụ giáo dục, không phải nhân vật có thật)",
-  "visible": true
+  "visible": true,
+  "story_label": "CÂU CHUYỆN MINH HỌA",
+  "story_question_label": "Nếu là bạn?",
+  "article_end_title": "Bình đẳng bắt đầu từ điều gần gũi",
+  "article_end_text": "Chia sẻ một công việc, động viên một ước mơ, lắng nghe một lựa chọn khác mình – đó là những việc nhỏ có thể làm ngay hôm nay.",
+  "article_end_button_label": "Bắt đầu thử thách 7 ngày",
+  "article_end_button_url": "../thu-thach-7-ngay/"
 }
