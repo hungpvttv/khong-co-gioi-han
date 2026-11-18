@@ -1,0 +1,7 @@
+question: "Bạn nữ muốn chơi bóng đá?"
+option_a: "Từ chối"
+option_b: "Tạo cơ hội theo điều kiện chung"
+option_c: "Bảo chọn môn khác"
+correct: "B"
+explanation: "Khuyến khích tham gia công bằng và an toàn."
+visible: true
