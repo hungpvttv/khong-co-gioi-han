@@ -89,12 +89,6 @@ content:
         label: Ghi chú kiểm chứng
         type: text
 
-settings:
-  content:
-    merge: true
-  commit:
-    identity: user
-
   - name: legal_cards
     label: Thư viện pháp luật
     type: collection
@@ -128,14 +122,15 @@ settings:
       - name: question
         label: Câu hỏi
         type: text
-      - name: options
-        label: Phương án
-        type: object
-        list: true
-        fields:
-          - name: text
-            label: Nội dung phương án
-            type: string
+      - name: option_a
+        label: Phương án A
+        type: string
+      - name: option_b
+        label: Phương án B
+        type: string
+      - name: option_c
+        label: Phương án C
+        type: string
       - name: correct
         label: Đáp án đúng (A/B/C)
         type: string
@@ -190,3 +185,9 @@ settings:
       - name: visible
         label: Hiển thị
         type: boolean
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
