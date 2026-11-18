@@ -90,7 +90,12 @@
     "next_label": "Tiếp theo",
     "finish_label": "Xem kết quả",
     "result_title": "Bạn đã hoàn thành câu hỏi!",
-    "retry_label": "Làm lại từ đầu"
+    "retry_label": "Làm lại từ đầu",
+    "correct_label": "Chính xác!",
+    "incorrect_label": "Mình cùng tìm hiểu nhé!",
+    "excellent_result": "Bạn đã nắm được nhiều kiến thức quan trọng. Hãy tiếp tục lan tỏa cách nhìn tôn trọng và công bằng.",
+    "good_result": "Bạn đã có những hiểu biết nền tảng. Hãy xem lại phần giải thích và tiếp tục khám phá.",
+    "retry_result": "Mỗi câu hỏi là một cơ hội học hỏi. Hãy đọc lại phần giải thích và thử sức lần nữa nhé."
   },
   "challenge": {
     "eyebrow": "CHƯƠNG 08 · HÀNH ĐỘNG VÀ LAN TỎA",
