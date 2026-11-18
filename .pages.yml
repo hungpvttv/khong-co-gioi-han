@@ -359,6 +359,15 @@ content:
               - name: text
                 label: Nội dung
                 type: text
+              - name: image
+                label: Ảnh kèm đoạn văn (không bắt buộc)
+                type: image
+              - name: alt
+                label: Mô tả ảnh
+                type: string
+              - name: caption
+                label: Chú thích ảnh
+                type: string
           - name: heading
             label: Tiêu đề phụ
             fields:
@@ -398,6 +407,15 @@ content:
               - name: story_question
                 label: Câu hỏi gợi mở
                 type: text
+              - name: image
+                label: Ảnh câu chuyện (không bắt buộc)
+                type: image
+              - name: alt
+                label: Mô tả ảnh
+                type: string
+              - name: caption
+                label: Chú thích ảnh
+                type: string
       - name: illustrative_note
         label: Ghi chú câu chuyện minh họa
         type: text
