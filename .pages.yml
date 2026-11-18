@@ -164,25 +164,48 @@ content:
       - name: sapo
         label: Sapo
         type: text
-      - name: paragraphs
-        label: Các đoạn nội dung
-        type: text
-        list: true
-      - name: stories
-        label: Ba câu chuyện minh họa
+      - name: hero_image
+        label: Ảnh đại diện bài viết
+        type: image
+      - name: hero_alt
+        label: Mô tả ảnh đại diện
+        type: string
+      - name: blocks
+        label: Nội dung bài viết (có thể kéo thả để đổi vị trí)
         type: object
         list: true
         fields:
-          - name: title
+          - name: type
+            label: Loại khối (paragraph / heading / image / quote / story)
+            type: string
+          - name: text
+            label: Nội dung đoạn văn
+            type: text
+          - name: heading
+            label: Tiêu đề phụ
+            type: string
+          - name: image
+            label: Ảnh minh họa
+            type: image
+          - name: alt
+            label: Mô tả ảnh
+            type: string
+          - name: caption
+            label: Chú thích ảnh
+            type: string
+          - name: quote
+            label: Trích dẫn / thông điệp
+            type: text
+          - name: story_title
             label: Tên câu chuyện
             type: string
-          - name: body
-            label: Nội dung
+          - name: story_body
+            label: Nội dung câu chuyện
             type: text
-          - name: message
-            label: Thông điệp
+          - name: story_message
+            label: Thông điệp câu chuyện
             type: string
-          - name: question
+          - name: story_question
             label: Câu hỏi gợi mở
             type: text
       - name: illustrative_note
