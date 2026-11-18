@@ -1,0 +1,7 @@
+question: "Chọn trưởng nhóm theo tiêu chí nào?"
+option_a: "Luôn chọn nam"
+option_b: "Luôn chọn nữ"
+option_c: "Năng lực, trách nhiệm và hợp tác"
+correct: "C"
+explanation: "Lựa chọn theo tiêu chí phù hợp, công bằng."
+visible: true
