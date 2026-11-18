@@ -45,7 +45,7 @@
   fetch('../data/family-article.json', { cache: 'no-cache' })
     .then((response) => response.ok ? response.json() : Promise.reject(new Error('Không tải được dữ liệu bài viết')))
     .then((data) => {
-      if (data.visible === false) return;
+      if (data.visible === false) { main.hidden = true; return; }
 
       const title = main.querySelector('h1');
       const lead = main.querySelector('.article-lead');
@@ -113,7 +113,7 @@
               storyNumber += 1;
               element = document.createElement('section');
               element.className = 'story-card family-content-block';
-              addText(element, 'span', 'CÂU CHUYỆN MINH HỌA ' + String(storyNumber).padStart(2, '0'), 'eyebrow');
+              addText(element, 'span', (data.story_label || 'CÂU CHUYỆN MINH HỌA') + ' ' + String(storyNumber).padStart(2, '0'), 'eyebrow');
               addText(element, 'h2', block.story_title);
               addText(element, 'p', block.story_body);
               const image = makeImage(block.image, block.alt, block.caption);
@@ -123,7 +123,7 @@
                 const question = document.createElement('p');
                 question.className = 'story-question';
                 const label = document.createElement('b');
-                label.textContent = 'Nếu là bạn? ';
+                label.textContent = (data.story_question_label || 'Nếu là bạn?') + ' ';
                 question.append(label, document.createTextNode(block.story_question));
                 element.append(question);
               }
@@ -149,14 +149,14 @@
         (data.stories || []).forEach((story, index) => {
           const card = document.createElement('section');
           card.className = 'story-card family-content-block';
-          addText(card, 'span', 'CÂU CHUYỆN MINH HỌA 0' + (index + 1), 'eyebrow');
+          addText(card, 'span', (data.story_label || 'CÂU CHUYỆN MINH HỌA') + ' 0' + (index + 1), 'eyebrow');
           addText(card, 'h2', story.title);
           addText(card, 'p', story.body);
           addText(card, 'blockquote', story.message);
           const question = document.createElement('p');
           question.className = 'story-question';
           const label = document.createElement('b');
-          label.textContent = 'Nếu là bạn? ';
+          label.textContent = (data.story_question_label || 'Nếu là bạn?') + ' ';
           question.append(label, document.createTextNode(story.question || ''));
           card.append(question);
           if (anchor) {
@@ -166,6 +166,19 @@
         });
       }
 
+
+      const ending = main.querySelector('.article-end');
+      if (ending) {
+        const endingTitle = ending.querySelector('h2');
+        const endingText = ending.querySelector('p');
+        const endingLink = ending.querySelector('a');
+        if (endingTitle && data.article_end_title) endingTitle.textContent = data.article_end_title;
+        if (endingText && data.article_end_text) endingText.textContent = data.article_end_text;
+        if (endingLink) {
+          if (data.article_end_button_label) endingLink.textContent = data.article_end_button_label + ' ↗';
+          if (data.article_end_button_url) endingLink.href = data.article_end_button_url;
+        }
+      }
       if (note && data.illustrative_note) {
         note.textContent = 'Lưu ý: ' + data.illustrative_note;
         if (anchor) anchor.after(note);
