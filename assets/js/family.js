@@ -3,7 +3,7 @@ const main=document.querySelector('.article-page');if(!main)return;
 const resolveMedia=(value)=>{
  if(!value)return '';
  const clean=String(value).trim().replace(/^\\/+/, '');
- try{return new URL(clean,document.baseURI).href;}catch{return '';}
+ try{return new URL(clean,new URL('../',document.baseURI)).href;}catch{return '';}
 };
 const makeImage=(src,alt,caption)=>{
  const figure=document.createElement('figure');figure.className='family-inline-figure';
