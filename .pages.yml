@@ -4,37 +4,97 @@ media:
 
 content:
   - name: site
-    label: Cấu hình website
+    label: Nhận diện và điều hướng website
     type: file
-    path: data/site.yml
-    format: yaml
+    path: data/site.json
+    format: json
     fields:
       - name: name
-        label: Tên website
+        label: Tên thương hiệu
         type: string
       - name: slogan
         label: Slogan
         type: string
       - name: description
-        label: Mô tả
+        label: Mô tả website
+        type: text
+      - name: logo
+        label: Logo
+        type: image
+      - name: favicon
+        label: Favicon
+        type: image
+      - name: menu
+        label: Menu điều hướng (kéo thả để sắp xếp)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Tên mục
+            type: string
+          - name: url
+            label: Đường dẫn
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: footer_title
+        label: Tiêu đề chân trang
+        type: string
+      - name: footer_text
+        label: Nội dung chân trang
         type: text
 
   - name: homepage
-    label: Trang chủ
+    label: Trang chủ và ảnh hero
     type: file
-    path: data/homepage.yml
-    format: yaml
+    path: data/homepage.json
+    format: json
     fields:
+      - name: hero_eyebrow
+        label: Dòng dẫn đầu hero
+        type: string
+      - name: hero_title
+        label: Tiêu đề hero
+        type: string
+      - name: hero_slogan
+        label: Slogan hero
+        type: string
+      - name: hero_description
+        label: Mô tả hero
+        type: text
+      - name: hero_button
+        label: Chữ nút hero
+        type: string
+      - name: hero_button_url
+        label: Liên kết nút hero
+        type: string
+      - name: hero_slides
+        label: Ảnh trình chiếu (kéo thả để sắp xếp)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Ảnh {index}: {alt}"
+        fields:
+          - name: image
+            label: Ảnh banner
+            type: image
+          - name: alt
+            label: Mô tả ảnh
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
       - name: intro_title
         label: Tiêu đề giới thiệu
         type: string
       - name: intro_text
         label: Nội dung giới thiệu
         type: text
-      - name: hero_slides
-        label: Ảnh trình chiếu
-        type: image
-        list: true
 
   - name: sections
     label: Tám nội dung
@@ -70,7 +130,10 @@ content:
       - name: days
         label: Các ngày thử thách
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Ngày {day}"
         fields:
           - name: day
             label: Ngày
@@ -101,7 +164,10 @@ content:
       - name: cards
         label: Danh sách thẻ pháp luật
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
         fields:
           - name: title
             label: Tiêu đề thẻ
@@ -128,7 +194,10 @@ content:
       - name: questions
         label: Bộ câu hỏi
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
         fields:
           - name: question
             label: Câu hỏi
@@ -171,43 +240,56 @@ content:
         label: Mô tả ảnh đại diện
         type: string
       - name: blocks
-        label: Nội dung bài viết (có thể kéo thả để đổi vị trí)
-        type: object
+        label: Nội dung bài viết
+        type: block
         list: true
-        fields:
-          - name: type
-            label: Loại khối (paragraph / heading / image / quote / story)
-            type: string
-          - name: text
-            label: Nội dung đoạn văn
-            type: text
+        blockKey: type
+        blocks:
+          - name: paragraph
+            label: Đoạn văn
+            fields:
+              - name: text
+                label: Nội dung
+                type: rich-text
           - name: heading
             label: Tiêu đề phụ
-            type: string
+            fields:
+              - name: heading
+                label: Tiêu đề
+                type: string
           - name: image
             label: Ảnh minh họa
-            type: image
-          - name: alt
-            label: Mô tả ảnh
-            type: string
-          - name: caption
-            label: Chú thích ảnh
-            type: string
+            fields:
+              - name: image
+                label: Ảnh
+                type: image
+              - name: alt
+                label: Mô tả ảnh
+                type: string
+              - name: caption
+                label: Chú thích
+                type: string
           - name: quote
-            label: Trích dẫn / thông điệp
-            type: text
-          - name: story_title
-            label: Tên câu chuyện
-            type: string
-          - name: story_body
-            label: Nội dung câu chuyện
-            type: text
-          - name: story_message
-            label: Thông điệp câu chuyện
-            type: string
-          - name: story_question
-            label: Câu hỏi gợi mở
-            type: text
+            label: Trích dẫn
+            fields:
+              - name: quote
+                label: Nội dung trích dẫn
+                type: text
+          - name: story
+            label: Câu chuyện minh họa
+            fields:
+              - name: story_title
+                label: Tên câu chuyện
+                type: string
+              - name: story_body
+                label: Nội dung câu chuyện
+                type: rich-text
+              - name: story_message
+                label: Thông điệp
+                type: text
+              - name: story_question
+                label: Câu hỏi gợi mở
+                type: text
       - name: illustrative_note
         label: Ghi chú câu chuyện minh họa
         type: text
@@ -224,7 +306,10 @@ content:
       - name: gallery
         label: Danh sách ảnh
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
         fields:
           - name: image
             label: Ảnh
