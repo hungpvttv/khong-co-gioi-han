@@ -96,6 +96,52 @@ content:
         label: Nội dung giới thiệu
         type: text
 
+      - name: headings
+        label: Tiêu đề các khu vực trang chủ
+        type: object
+        fields:
+          - name: journey_eyebrow
+            label: Dòng dẫn hành trình
+            type: string
+          - name: journey_title
+            label: Tiêu đề hành trình
+            type: string
+          - name: journey_description
+            label: Mô tả hành trình
+            type: text
+          - name: doors_eyebrow
+            label: Dòng dẫn tám cánh cửa
+            type: string
+          - name: doors_title
+            label: Tiêu đề tám cánh cửa
+            type: string
+          - name: doors_description
+            label: Mô tả tám cánh cửa
+            type: text
+          - name: compare_eyebrow
+            label: Dòng dẫn kiến thức trực quan
+            type: string
+          - name: compare_title
+            label: Tiêu đề thẻ so sánh
+            type: string
+          - name: compare_description
+            label: Mô tả thẻ so sánh
+            type: text
+          - name: concepts_title
+            label: Tiêu đề khái niệm
+            type: string
+          - name: concepts_description
+            label: Mô tả khái niệm
+            type: text
+          - name: gallery_eyebrow
+            label: Dòng dẫn thư viện ảnh
+            type: string
+          - name: gallery_title
+            label: Tiêu đề thư viện ảnh
+            type: string
+          - name: gallery_description
+            label: Mô tả thư viện ảnh
+            type: text
       - name: steps
         label: Năm chạm (thẻ hành trình)
         type: object
