@@ -126,6 +126,20 @@
           if (title) title.textContent = item.misconception || '';
           if (right) right.textContent = item.correct || '';
         });
+        const situations = [...document.querySelectorAll('.situation-grid .situation')];
+        (home.situations || []).forEach((item, index) => {
+          const node = situations[index]; if (!node) return;
+          node.hidden = item.visible === false;
+          const summary = node.querySelector('summary'), paragraphs = node.querySelectorAll('p');
+          if (summary) summary.textContent = item.title || '';
+          [item.context, item.explanation, item.action].forEach((value, pIndex) => {
+            const paragraph = paragraphs[pIndex]; if (!paragraph) return;
+            const label = paragraph.querySelector('b');
+            paragraph.replaceChildren();
+            if (label) { paragraph.append(label); paragraph.append(document.createTextNode(' ' + (value || ''))); }
+            else paragraph.textContent = value || '';
+          });
+        });
         const conceptNodes = [...document.querySelectorAll('.infographic-section .concept-card')];
         (home.concepts || []).forEach((item, index) => {
           const node = conceptNodes[index]; if (!node) return;
