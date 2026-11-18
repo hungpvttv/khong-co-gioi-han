@@ -1,6 +1,6 @@
 (() => {
 const root=document.querySelector('.law-cards');if(!root)return;
-fetch('../data/legal.json').then(r=>r.ok?r.json():Promise.reject()).then(data=>{
+fetch('../data/legal.json', {cache:'no-cache'}).then(r=>r.ok?r.json():Promise.reject()).then(data=>{
 const cards=(data.cards||[]).filter(x=>x.visible!==false);if(!cards.length)return;
 root.innerHTML='';
 cards.forEach((item,i)=>{
