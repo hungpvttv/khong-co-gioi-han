@@ -116,3 +116,10 @@ footer .share-wrap{margin-left:auto}
 @media(max-width:650px){.article-lead{font-size:17px!important}.story-card{padding:18px}.quiz-panel{padding:17px}.quiz-panel h2{font-size:20px}.law-card{padding:13px}.law-card>div{padding-left:0}.challenge-day{padding:14px}}
 
 .gallery-carousel{display:block;position:relative;overflow:hidden;margin-top:18px}.gallery-track{display:flex;transition:transform .35s ease;touch-action:pan-y}.gallery-track figure{flex:0 0 100%;width:100%;cursor:zoom-in}.gallery-track img{aspect-ratio:16/8;object-fit:cover}.gallery-controls{display:flex;align-items:center;justify-content:center;gap:14px;padding:12px}.gallery-arrow{width:32px;height:32px;border:1px solid #dce7e9;border-radius:50%;background:white;font-size:22px;line-height:1;cursor:pointer;color:#35556a}.gallery-dots{display:flex;gap:7px}.gallery-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#cbd6da;cursor:pointer}.gallery-dots button.active{width:22px;border-radius:8px;background:#4b9fc5}.gallery-lightbox{position:fixed;inset:0;z-index:100;background:#17232beF;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px}.gallery-lightbox img{max-width:min(92vw,1200px);max-height:78vh;object-fit:contain}.gallery-lightbox p{color:white;text-align:center}.lightbox-close{position:absolute;right:22px;top:15px;border:0;background:transparent;color:white;font-size:36px;cursor:pointer}
+
+/* Explicit return-to-home navigation on detail pages */
+.home-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:0 0 auto;padding:8px 13px;border:1px solid #d8e6eb;border-radius:11px;background:#fff;color:#29475a;text-decoration:none;font-size:13px;font-weight:700;white-space:nowrap;transition:background .2s,border-color .2s}
+.home-button:hover{background:#edf8fc;border-color:#9bcfe4;color:#287da4}
+.home-button span{font-size:18px;line-height:1}
+@media(max-width:900px){.home-button{margin-left:auto;margin-right:8px}}
+@media(max-width:650px){.home-button{padding:7px 9px;font-size:12px;gap:4px}.home-button span{font-size:16px}}
