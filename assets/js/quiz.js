@@ -15,7 +15,7 @@ const fallback = [
 ];
 const labels={question_count_label:'Câu',score_label:'Điểm',next_label:'Tiếp theo',finish_label:'Xem kết quả',result_title:'Bạn đã hoàn thành câu hỏi!',retry_label:'Làm lại từ đầu',correct_label:'Chính xác!',incorrect_label:'Mình cùng tìm hiểu nhé!',excellent_result:'Bạn đã nắm được nhiều kiến thức quan trọng. Hãy tiếp tục lan tỏa cách nhìn tôn trọng và công bằng.',good_result:'Bạn đã có những hiểu biết nền tảng. Hãy xem lại phần giải thích và tiếp tục khám phá.',retry_result:'Mỗi câu hỏi là một cơ hội học hỏi. Hãy đọc lại phần giải thích và thử sức lần nữa nhé.'};
 let questions=fallback,ui={...labels},index=0,score=0,answered=false;
-const fetchJson = url => fetch(url).then(response=>response.ok?response.json():Promise.reject(new Error('Fetch failed')));
+const fetchJson = url => fetch(url,{cache:'no-cache'}).then(response=>response.ok?response.json():Promise.reject(new Error('Fetch failed')));
 Promise.allSettled([fetchJson('../data/quiz.json'),fetchJson('../data/pages.json')]).then(results=>{
   const quizData=results[0].status==='fulfilled'?results[0].value:null;
   const pageData=results[1].status==='fulfilled'?results[1].value:null;
