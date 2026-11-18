@@ -547,7 +547,7 @@ content:
             type: text
           - name: paragraphs
             label: Các đoạn nội dung
-            type: rich-text
+            type: text
             list: true
           - name: concept_heading
             label: Tiêu đề khái niệm
