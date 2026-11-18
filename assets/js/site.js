@@ -14,8 +14,8 @@
   async function init() {
     try {
       const [siteResponse, homeResponse] = await Promise.all([
-        fetch(new URL('data/site.json', rootUrl)),
-        document.querySelector('.hero-slider') ? fetch(new URL('data/homepage.json', rootUrl)) : Promise.resolve(null)
+        fetch(new URL('data/site.json', rootUrl), {cache:'no-cache'}),
+        document.querySelector('.hero-slider') ? fetch(new URL('data/homepage.json', rootUrl), {cache:'no-cache'}) : Promise.resolve(null)
       ]);
       if (!siteResponse.ok) throw new Error('Không tải được cấu hình website');
       const site = await siteResponse.json();
