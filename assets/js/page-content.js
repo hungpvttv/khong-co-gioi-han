@@ -8,7 +8,7 @@
     const node = document.querySelector(selector);
     if (node && typeof value === 'string') node.textContent = value;
   };
-  fetch(new URL('data/pages.json', root)).then(response => {
+  fetch(new URL('data/pages.json', root), {cache:'no-cache'}).then(response => {
     if (!response.ok) throw new Error('Không tải được nội dung trang');
     return response.json();
   }).then(data => {
