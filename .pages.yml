@@ -638,6 +638,21 @@ content:
           - name: retry_label
             label: Nút làm lại
             type: string
+          - name: correct_label
+            label: Phản hồi đáp án đúng
+            type: string
+          - name: incorrect_label
+            label: Phản hồi khi chọn đáp án sai
+            type: string
+          - name: excellent_result
+            label: Thông điệp kết quả tốt
+            type: text
+          - name: good_result
+            label: Thông điệp kết quả khá
+            type: text
+          - name: retry_result
+            label: Thông điệp khuyến khích thử lại
+            type: text
       - name: challenge
         label: Trang Thử thách 7 ngày
         type: object
