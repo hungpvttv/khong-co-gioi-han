@@ -144,6 +144,7 @@
       document.documentElement.dataset.siteCmsLoaded = 'true';
     } catch (error) {
       console.warn('CMS website: dùng nội dung dự phòng trong HTML.', error);
+      window.dispatchEvent(new CustomEvent('site:hero-updated'));
     }
   }
   init();
