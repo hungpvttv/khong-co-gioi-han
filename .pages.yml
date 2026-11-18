@@ -185,6 +185,15 @@ content:
           - name: link_url
             label: Đường dẫn liên kết
             type: string
+          - name: note
+            label: Ghi chú minh họa hoặc lưu ý
+            type: text
+          - name: secondary_title
+            label: Tiêu đề nội dung phụ
+            type: string
+          - name: secondary_text
+            label: Nội dung phụ
+            type: text
           - name: visible
             label: Hiển thị
             type: boolean
