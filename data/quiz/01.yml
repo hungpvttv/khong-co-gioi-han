@@ -1,0 +1,7 @@
+question: "Bạn nữ muốn tham gia CLB robot?"
+option_a: "Robot hợp với con trai"
+option_b: "Nên được thử sức theo năng lực"
+option_c: "Chỉ tham gia khi không có bạn nam"
+correct: "B"
+explanation: "Cơ hội học công nghệ không phụ thuộc giới tính."
+visible: true
