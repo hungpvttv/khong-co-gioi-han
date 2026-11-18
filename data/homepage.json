@@ -1,0 +1,22 @@
+{
+  "hero_eyebrow": "MỘT KHÔNG GIAN CỦA NHỮNG ƯỚC MƠ",
+  "hero_title": "KHÔNG CÓ GIỚI HẠN",
+  "hero_slogan": "Phá bỏ khuôn mẫu, tự tin tỏa sáng.",
+  "hero_description": "Mỗi học sinh đều có quyền khám phá sở thích, phát triển năng lực và theo đuổi ước mơ mà không bị bó buộc bởi những khuôn mẫu giới.",
+  "hero_button": "Khám phá ngay",
+  "hero_button_url": "#hanh-trinh",
+  "hero_slides": [
+    {
+      "image": "/assets/images/hero-banner-1.webp",
+      "alt": "Hoạt động của học sinh và giáo viên tại trường",
+      "visible": true
+    },
+    {
+      "image": "/assets/images/hero-banner-2.webp",
+      "alt": "Học sinh tham gia hoạt động tìm hiểu và trao đổi",
+      "visible": true
+    }
+  ],
+  "intro_title": "Không có giới hạn",
+  "intro_text": "Mỗi người đều có quyền khám phá sở thích, phát triển năng lực và theo đuổi ước mơ của riêng mình."
+}
