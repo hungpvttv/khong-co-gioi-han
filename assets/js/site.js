@@ -95,6 +95,52 @@
           window.dispatchEvent(new CustomEvent('site:hero-updated'));
         }
       }
+
+      if (home) {
+        const stepNodes = [...document.querySelectorAll('.steps .step-card')];
+        (home.steps || []).forEach((item, index) => {
+          const node = stepNodes[index]; if (!node) return;
+          node.hidden = item.visible === false;
+          const strong = node.querySelector('strong'), small = node.querySelector('small'), link = node.querySelector('.step-link');
+          if (strong) strong.textContent = item.title || '';
+          if (small) small.textContent = item.description || '';
+          if (link) link.innerHTML = '';
+          if (link) { link.append(document.createTextNode(item.cta || 'Khám phá ')); const b = document.createElement('b'); b.textContent = '↗'; link.append(b); }
+          node.href = String(item.url || '#').startsWith('#') ? item.url : assetUrl(item.url);
+        });
+        (home.doors || []).forEach(item => {
+          const section = document.getElementById(item.id); if (!section) return;
+          section.hidden = item.visible === false;
+          const eyebrow = section.querySelector('.eyebrow'), heading = section.querySelector('h2'), paragraph = section.querySelector('.feature-inner > div > p, .feature-inner div > p');
+          if (eyebrow && item.eyebrow) eyebrow.textContent = item.eyebrow;
+          if (heading && item.title) heading.textContent = item.title;
+          if (paragraph && item.description) paragraph.textContent = item.description;
+          const link = section.querySelector('.text-link, .feature-inner .button');
+          if (link && item.link_label) { link.textContent = item.link_label + ' ↗'; if (item.link_url) link.href = String(item.link_url).startsWith('#') ? item.link_url : assetUrl(item.link_url); }
+        });
+        const compareNodes = [...document.querySelectorAll('.infographic-section .compare-card')];
+        (home.comparisons || []).forEach((item, index) => {
+          const node = compareNodes[index]; if (!node) return;
+          node.hidden = item.visible === false;
+          const title = node.querySelector('h3'), right = node.querySelector('.right-view');
+          if (title) title.textContent = item.misconception || '';
+          if (right) right.textContent = item.correct || '';
+        });
+        const conceptNodes = [...document.querySelectorAll('.infographic-section .concept-card')];
+        (home.concepts || []).forEach((item, index) => {
+          const node = conceptNodes[index]; if (!node) return;
+          node.hidden = item.visible === false;
+          const title = node.querySelector('.concept-title'), description = node.querySelector('p');
+          if (title && item.title) { const icon = title.querySelector('.concept-icon'); title.textContent = ''; if (icon) title.append(icon); title.append(document.createTextNode(item.title)); }
+          if (description) description.textContent = item.description || '';
+        });
+        const closing = document.querySelector('.closing');
+        if (closing && home.closing) {
+          setText('.closing .eyebrow', home.closing.eyebrow);
+          setText('.closing h2', home.closing.title);
+          setText('.closing p', home.closing.description);
+        }
+      }
       document.documentElement.dataset.siteCmsLoaded = 'true';
     } catch (error) {
       console.warn('CMS website: dùng nội dung dự phòng trong HTML.', error);
