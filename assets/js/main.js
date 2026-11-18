@@ -45,6 +45,5 @@
     document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
     start();
   }
-  initSlider();
-  window.addEventListener('site:hero-updated', initSlider);
+  window.addEventListener('site:hero-updated', initSlider, { once: true });
 })();
