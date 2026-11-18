@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Bạn nữ muốn tham gia CLB robot?",
+      "option_a": "Robot hợp với con trai",
+      "option_b": "Nên được thử sức theo năng lực",
+      "option_c": "Chỉ tham gia khi không có bạn nam",
+      "correct": "B",
+      "explanation": "Cơ hội học công nghệ không phụ thuộc giới tính.",
+      "visible": true
+    },
+    {
+      "question": "Bạn nam bật khóc vì bị bắt nạt?",
+      "option_a": "Trêu bạn",
+      "option_b": "Bảo giấu cảm xúc",
+      "option_c": "Lắng nghe và tìm người lớn hỗ trợ",
+      "correct": "C",
+      "explanation": "Ai cũng có quyền bày tỏ cảm xúc và tìm trợ giúp.",
+      "visible": true
+    },
+    {
+      "question": "Việc nhà nên phân chia thế nào?",
+      "option_a": "Theo khả năng và sự chia sẻ",
+      "option_b": "Chỉ mẹ và con gái",
+      "option_c": "Chỉ bố quyết định",
+      "correct": "A",
+      "explanation": "Mọi thành viên có thể đóng góp phù hợp.",
+      "visible": true
+    },
+    {
+      "question": "Bạn nam thích múa?",
+      "option_a": "Khuyên bỏ",
+      "option_b": "Tôn trọng và động viên",
+      "option_c": "Cười đùa",
+      "correct": "B",
+      "explanation": "Năng khiếu nghệ thuật không phụ thuộc giới tính.",
+      "visible": true
+    },
+    {
+      "question": "Chọn trưởng nhóm theo tiêu chí nào?",
+      "option_a": "Luôn chọn nam",
+      "option_b": "Luôn chọn nữ",
+      "option_c": "Năng lực, trách nhiệm và hợp tác",
+      "correct": "C",
+      "explanation": "Lựa chọn theo tiêu chí phù hợp, công bằng.",
+      "visible": true
+    },
+    {
+      "question": "Nghe câu nói “Con gái không giỏi toán”?",
+      "option_a": "Giải thích không thể đánh giá theo giới",
+      "option_b": "Đồng ý",
+      "option_c": "Khuyên bỏ toán",
+      "correct": "A",
+      "explanation": "Năng lực cá nhân không thể suy ra từ giới tính.",
+      "visible": true
+    },
+    {
+      "question": "Bạn nữ muốn chơi bóng đá?",
+      "option_a": "Từ chối",
+      "option_b": "Tạo cơ hội theo điều kiện chung",
+      "option_c": "Bảo chọn môn khác",
+      "correct": "B",
+      "explanation": "Khuyến khích tham gia công bằng và an toàn.",
+      "visible": true
+    },
+    {
+      "question": "Bạn bị chế giễu vì sở thích?",
+      "option_a": "Đứng xem",
+      "option_b": "Tham gia trêu",
+      "option_c": "Lên tiếng và tìm hỗ trợ",
+      "correct": "C",
+      "explanation": "Tôn trọng và hỗ trợ xây dựng trường học an toàn.",
+      "visible": true
+    },
+    {
+      "question": "Bình đẳng giới nghĩa là gì?",
+      "option_a": "Mọi người giống nhau",
+      "option_b": "Cơ hội công bằng, không phân biệt đối xử",
+      "option_c": "Một giới luôn ưu tiên",
+      "correct": "B",
+      "explanation": "Bình đẳng tôn trọng khác biệt.",
+      "visible": true
+    },
+    {
+      "question": "Lựa chọn nghề dựa vào đâu?",
+      "option_a": "Sở thích, năng lực, điều kiện và yêu cầu nghề",
+      "option_b": "Chỉ giới tính",
+      "option_c": "Định kiến bạn bè",
+      "correct": "A",
+      "explanation": "Hướng nghiệp dựa trên năng lực và điều kiện thực tế.",
+      "visible": true
+    }
+  ]
+}
