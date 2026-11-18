@@ -358,7 +358,7 @@ content:
             fields:
               - name: text
                 label: Nội dung
-                type: rich-text
+                type: text
           - name: heading
             label: Tiêu đề phụ
             fields:
@@ -391,7 +391,7 @@ content:
                 type: string
               - name: story_body
                 label: Nội dung câu chuyện
-                type: rich-text
+                type: text
               - name: story_message
                 label: Thông điệp
                 type: text
