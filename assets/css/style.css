@@ -80,3 +80,23 @@
 .concept-title{min-width:0;white-space:normal}
 .concept-icon{flex:0 0 34px}
 .concept-card p{line-height:1.6}
+
+/* Share controls – dùng chung trên tất cả các trang */
+.site-header{gap:18px}
+.share-wrap{position:relative;display:inline-flex;align-items:center;flex:0 0 auto}
+.share-trigger{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 13px;border:1px solid #d8e6eb;border-radius:11px;background:#fff;color:#29475a;font:700 13px/1.2 inherit;cursor:pointer;white-space:nowrap;transition:background .2s,border-color .2s,transform .2s}
+.share-trigger:hover{background:#edf8fc;border-color:#9bcfe4;transform:translateY(-1px)}
+.share-trigger svg{width:17px;height:17px}
+.share-menu{position:absolute;right:0;top:calc(100% + 10px);z-index:60;width:224px;padding:7px;background:#fff;border:1px solid #e7e9e8;border-radius:14px;box-shadow:0 14px 34px #26334220}
+.share-menu[hidden]{display:none}
+.share-menu button{width:100%;display:flex;align-items:center;gap:10px;padding:11px 10px;border:0;border-radius:9px;background:transparent;text-align:left;color:#263342;font:500 13px/1.35 inherit;cursor:pointer}
+.share-menu button:hover{background:#f0f7fa}
+.share-brand,.share-copy-icon{width:23px;height:23px;display:grid;place-items:center;border-radius:7px;font-weight:800;font-size:14px}
+.share-facebook{background:#e8efff;color:#2460c5}
+.share-zalo{background:#e4f3ff;color:#1687c9;font-size:11px}
+.share-copy-icon{background:#f3effb;color:#775bb4}
+.share-feedback{margin:3px 8px 5px;color:#27865a;font-size:12px;min-height:0}
+footer .share-wrap{margin-left:auto}
+.footer-share-label{font-size:12px;color:#7b8790}
+@media(max-width:900px){.site-header{gap:10px}.share-trigger{padding:8px 10px}}
+@media(max-width:650px){.site-header{padding-left:16px;padding-right:16px}.site-header>.share-wrap{margin-left:auto}.share-trigger span{display:inline}.share-menu{right:0}footer .share-wrap{margin-left:0}footer .footer-share-label{margin-top:8px}}
