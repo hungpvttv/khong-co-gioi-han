@@ -22,8 +22,8 @@ function draw(){
  fill.style.width=(tasks.length?done.length/tasks.length*100:0)+'%';
 }
 Promise.allSettled([
- fetch('../data/challenge.json').then(r=>r.ok?r.json():Promise.reject()),
- fetch('../data/pages.json').then(r=>r.ok?r.json():Promise.reject())
+ fetch('../data/challenge.json',{cache:'no-cache'}).then(r=>r.ok?r.json():Promise.reject()),
+ fetch('../data/pages.json',{cache:'no-cache'}).then(r=>r.ok?r.json():Promise.reject())
 ]).then(results=>{
  const data=results[0].status==='fulfilled'?results[0].value:null;
  const pages=results[1].status==='fulfilled'?results[1].value:null;
