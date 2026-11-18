@@ -1,16 +1,19 @@
 {
   "title": "Bình đẳng bắt đầu từ một căn bếp, một lời động viên và một ước mơ",
   "sapo": "Từ cách chia sẻ việc nhà đến cách cha mẹ lắng nghe ước mơ của con, bình đẳng giới không phải điều xa vời. Nó hiện diện trong những lựa chọn nhỏ mỗi ngày.",
-  "hero_image": "assets/images/hoat-dong-1.webp",
-  "hero_alt": "Các thành viên cùng tham gia hoạt động tập thể",
+  "hero_image": "/assets/images/BDG o gia dinh 1.webp",
   "blocks": [
     {
       "type": "paragraph",
-      "text": "Có bao giờ bạn tự hỏi: Vì sao trong một số gia đình, mẹ thường chuẩn bị bữa cơm, dọn dẹp nhà cửa, còn bố được xem là người phải gánh vác những công việc lớn lao? Mỗi gia đình có cách phân chia công việc khác nhau tùy điều kiện và hoàn cảnh. Nhưng khi một người mặc nhiên phải làm tất cả chỉ vì là nam hay nữ, chúng ta cần suy nghĩ lại."
+      "text": "Có bao giờ bạn tự hỏi: Vì sao trong một số gia đình, mẹ thường chuẩn bị bữa cơm, dọn dẹp nhà cửa, còn bố được xem là người phải gánh vác những công việc lớn lao? Mỗi gia đình có cách phân chia công việc khác nhau tùy điều kiện và hoàn cảnh. Nhưng khi một người mặc nhiên phải làm tất cả chỉ vì là nam hay nữ, chúng ta cần suy nghĩ lại.",
+      "image": "/assets/images/BDG o gia dinh 1.webp",
+      "alt": "Nguồn: UNICEF/UNI674396/Le Lijour"
     },
     {
       "type": "paragraph",
-      "text": "Bình đẳng trong gia đình không nhất thiết là mỗi người làm đúng một nửa công việc. Đó là sự chia sẻ trách nhiệm, tôn trọng đóng góp của nhau và cùng tạo điều kiện để các thành viên được học tập, nghỉ ngơi, phát triển. Một bạn nam biết nấu ăn không có gì đáng xấu hổ. Một bạn nữ yêu thích sửa chữa máy móc cũng không có gì bất thường."
+      "text": "Bình đẳng trong gia đình không nhất thiết là mỗi người làm đúng một nửa công việc. Đó là sự chia sẻ trách nhiệm, tôn trọng đóng góp của nhau và cùng tạo điều kiện để các thành viên được học tập, nghỉ ngơi, phát triển. Một bạn nam biết nấu ăn không có gì đáng xấu hổ. Một bạn nữ yêu thích sửa chữa máy móc cũng không có gì bất thường.",
+      "image": "/assets/images/BDG o gia dinh 2.webp",
+      "alt": "Nguồn: unicef.org"
     },
     {
       "type": "paragraph",
@@ -38,6 +41,6 @@
       "story_question": "Hãy tôn trọng sở thích của Nam và nhìn nhận việc nấu ăn như một kỹ năng sống hữu ích."
     }
   ],
-  "illustrative_note": "Ba câu chuyện là tình huống minh họa phục vụ giáo dục, không phải nhân vật có thật.",
+  "illustrative_note": "(Ba câu chuyện là tình huống minh họa phục vụ giáo dục, không phải nhân vật có thật)",
   "visible": true
 }
