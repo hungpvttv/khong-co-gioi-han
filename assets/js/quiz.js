@@ -1,5 +1,5 @@
 (() => {
-const questions=[
+let questions=[
 {q:"Bạn nữ muốn tham gia CLB robot?",a:["Robot hợp với con trai","Nên được thử sức theo năng lực","Chỉ tham gia khi không có bạn nam"],c:1,e:"Cơ hội học công nghệ không phụ thuộc giới tính."},
 {q:"Bạn nam bật khóc vì bị bắt nạt?",a:["Trêu bạn","Bảo giấu cảm xúc","Lắng nghe và tìm người lớn hỗ trợ"],c:2,e:"Ai cũng có quyền bày tỏ cảm xúc và tìm trợ giúp."},
 {q:"Việc nhà nên phân chia thế nào?",a:["Theo khả năng và sự chia sẻ","Chỉ mẹ và con gái","Chỉ bố quyết định"],c:0,e:"Mọi thành viên có thể đóng góp phù hợp."},
@@ -11,11 +11,15 @@ const questions=[
 {q:"Bình đẳng giới nghĩa là gì?",a:["Mọi người giống nhau","Cơ hội công bằng, không phân biệt đối xử","Một giới luôn ưu tiên"],c:1,e:"Bình đẳng tôn trọng khác biệt."},
 {q:"Lựa chọn nghề dựa vào đâu?",a:["Sở thích, năng lực, điều kiện và yêu cầu nghề","Chỉ giới tính","Định kiến bạn bè"],c:0,e:"Hướng nghiệp dựa trên năng lực và điều kiện thực tế."}
 ];
+fetch('../data/quiz.json').then(r=>r.ok?r.json():Promise.reject()).then(data=>{
+if(Array.isArray(data.questions)&&data.questions.length){questions=data.questions.filter(x=>x.visible!==false).map(x=>({q:x.question,a:[x.option_a,x.option_b,x.option_c],c:['A','B','C'].indexOf(String(x.correct).toUpperCase()),e:x.explanation}));}
+}).catch(()=>{}).finally(()=>{if(typeof render==='function')render();});
 const root=document.getElementById('quiz-app'); if(!root)return;
 const count=document.getElementById('quiz-count'),scoreEl=document.getElementById('quiz-score'),progress=document.getElementById('quiz-progress-fill'),question=document.getElementById('quiz-question'),options=document.getElementById('quiz-options'),feedback=document.getElementById('quiz-feedback'),next=document.getElementById('quiz-next');
 let index=0,score=0,answered=false;
 function render(){answered=false;const item=questions[index];count.textContent='Câu '+(index+1)+' / '+questions.length;scoreEl.textContent='Điểm: '+score;progress.style.width=((index)/questions.length*100)+'%';question.textContent=item.q;options.innerHTML='';feedback.hidden=true;next.disabled=true;next.textContent=index===questions.length-1?'Xem kết quả':'Tiếp theo →';item.a.forEach((answer,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-option';b.textContent=String.fromCharCode(65+i)+'. '+answer;b.addEventListener('click',()=>choose(i));options.append(b);});}
 function choose(choice){if(answered)return;answered=true;const item=questions[index];const buttons=[...options.children];buttons.forEach((b,i)=>{b.disabled=true;if(i===item.c)b.classList.add('correct');if(i===choice&&choice!==item.c)b.classList.add('incorrect');});if(choice===item.c)score++;feedback.hidden=false;feedback.innerHTML='<b>'+(choice===item.c?'Chính xác!':'Mình cùng tìm hiểu nhé!')+'</b><p>'+item.e+'</p>';scoreEl.textContent='Điểm: '+score;next.disabled=false;}
 next.addEventListener('click',()=>{if(!answered)return;if(index<questions.length-1){index++;render();}else{progress.style.width='100%';root.innerHTML='<div class="quiz-result"><span class="eyebrow">HOÀN THÀNH</span><h2>Bạn đã hoàn thành 10 câu hỏi!</h2><p class="quiz-result-score">'+score+' / 10 câu trả lời đúng</p><p>'+ (score>=8?'Bạn đã nắm được nhiều kiến thức quan trọng. Hãy tiếp tục lan tỏa cách nhìn tôn trọng và công bằng.':score>=5?'Bạn đã có những hiểu biết nền tảng. Hãy xem lại phần giải thích và tiếp tục khám phá.':'Mỗi câu hỏi là một cơ hội học hỏi. Hãy đọc lại phần giải thích và thử sức lần nữa nhé.')+'</p><button class="button" id="quiz-retry" type="button">Làm lại từ đầu ↻</button></div>';document.getElementById('quiz-retry').addEventListener('click',()=>{index=0;score=0;root.innerHTML='<div class="quiz-top"><span id="quiz-count"></span><span id="quiz-score"></span></div><div class="quiz-progress"><span id="quiz-progress-fill"></span></div><h2 id="quiz-question"></h2><div id="quiz-options" class="quiz-options"></div><div id="quiz-feedback" class="quiz-feedback" hidden></div><button id="quiz-next" class="button" type="button" disabled>Tiếp theo →</button>';location.reload();});}});
+// Render once immediately; editable CMS data replaces the fallback when it loads.
 render();
 })();
