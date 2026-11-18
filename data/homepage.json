@@ -100,7 +100,8 @@
       "description": "Ba câu chuyện minh họa: Bữa cơm của cả nhà; Ước mơ của Mai; Nam và những món ăn đầu tiên.",
       "link_label": "Đọc bài viết đầy đủ",
       "link_url": "gia-dinh/",
-      "visible": true
+      "visible": true,
+      "note": "Các câu chuyện là tình huống minh họa, không phải nhân vật có thật."
     },
     {
       "id": "phap-luat",
@@ -127,7 +128,10 @@
       "description": "Thử thách 7 ngày giúp mỗi người bắt đầu từ một lời nói, một việc sẻ chia và một hành động tôn trọng mỗi ngày.",
       "link_label": "Tham gia thử thách 7 ngày",
       "link_url": "thu-thach-7-ngay/",
-      "visible": true
+      "visible": true,
+      "secondary_title": "Lan tỏa điều tích cực",
+      "secondary_text": "Chia sẻ thông điệp tôn trọng sự khác biệt, lắng nghe phản hồi và ghi nhận những thay đổi bằng dữ liệu thực tế.",
+      "note": "Số liệu và phản hồi chỉ được công bố khi đã thu thập, kiểm chứng và có sự đồng ý phù hợp."
     }
   ],
   "comparisons": [
