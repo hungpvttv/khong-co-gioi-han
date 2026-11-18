@@ -327,6 +327,130 @@ content:
             label: Hiển thị
             type: boolean
 
+  - name: subpage_text
+    label: Nội dung các trang con
+    type: file
+    path: data/pages.json
+    format: json
+    fields:
+      - name: knowledge
+        label: Trang Kiến thức
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: paragraphs
+            label: Các đoạn nội dung
+            type: rich-text
+            list: true
+          - name: concept_heading
+            label: Tiêu đề khái niệm
+            type: string
+          - name: comparison_heading
+            label: Tiêu đề so sánh
+            type: string
+          - name: note
+            label: Ghi chú
+            type: text
+          - name: button_label
+            label: Chữ nút
+            type: string
+          - name: button_url
+            label: Liên kết nút
+            type: string
+      - name: legal
+        label: Trang Pháp luật
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: notice
+            label: Lưu ý
+            type: text
+          - name: more_heading
+            label: Tiêu đề tìm hiểu thêm
+            type: string
+          - name: more_note
+            label: Ghi chú cuối trang
+            type: text
+      - name: quiz
+        label: Trang Trắc nghiệm
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: note
+            label: Lưu ý
+            type: text
+          - name: question_count_label
+            label: Nhãn số câu
+            type: string
+          - name: score_label
+            label: Nhãn điểm
+            type: string
+          - name: next_label
+            label: Nút tiếp theo
+            type: string
+          - name: finish_label
+            label: Nút xem kết quả
+            type: string
+          - name: result_title
+            label: Tiêu đề kết quả
+            type: string
+          - name: retry_label
+            label: Nút làm lại
+            type: string
+      - name: challenge
+        label: Trang Thử thách 7 ngày
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: progress_title
+            label: Tiêu đề tiến độ
+            type: string
+          - name: pledge_title
+            label: Tiêu đề tuyên ngôn
+            type: string
+          - name: pledge_paragraphs
+            label: Nội dung tuyên ngôn
+            type: text
+            list: true
+          - name: pledge_label
+            label: Nội dung xác nhận
+            type: string
+          - name: note
+            label: Lưu ý cuối trang
+            type: text
+
 settings:
   content:
     merge: true
