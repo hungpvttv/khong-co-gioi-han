@@ -178,5 +178,42 @@
     "eyebrow": "KHÔNG CÓ GIỚI HẠN",
     "title": "Mỗi ước mơ đều xứng đáng được tôn trọng.",
     "description": "Phá bỏ khuôn mẫu, tự tin tỏa sáng."
-  }
+  },
+  "situations": [
+    {
+      "title": "Con trai không được khóc?",
+      "context": "Minh bị chấn thương khi đá bóng và bật khóc. Một số bạn trêu: “Con trai mà khóc nhè!”.",
+      "explanation": "Cảm xúc không phải sự yếu kém.",
+      "action": "Không trêu chọc; hỏi thăm và hỗ trợ bạn.",
+      "visible": true
+    },
+    {
+      "title": "Con gái không giỏi công nghệ?",
+      "context": "Lan muốn tham gia thi robot nhưng nghe: “Con gái học công nghệ khó lắm!”.",
+      "explanation": "Năng lực công nghệ không do giới tính quyết định.",
+      "action": "Khuyến khích thử sức, đánh giá theo nỗ lực và kỹ năng.",
+      "visible": true
+    },
+    {
+      "title": "Việc nhà chỉ dành cho mẹ?",
+      "context": "Sau bữa tối, bố và con trai xem tivi, mẹ và con gái dọn dẹp.",
+      "explanation": "Việc nhà là trách nhiệm chung.",
+      "action": "Chia sẻ công việc theo tuổi và khả năng.",
+      "visible": true
+    },
+    {
+      "title": "Con gái không nên chơi bóng đá?",
+      "context": "Hà đăng ký đội bóng nhưng bị phản đối vì là con gái.",
+      "explanation": "Sở thích thể thao không nên bị hạn chế bởi định kiến.",
+      "action": "Tạo điều kiện tham gia theo tiêu chí phù hợp.",
+      "visible": true
+    },
+    {
+      "title": "Con trai phải chọn nghề thu nhập cao?",
+      "context": "Một bạn nam thích nghề giáo viên mầm non nhưng bị chê.",
+      "explanation": "Nghề nghiệp cần cân nhắc năng lực, sở thích và điều kiện.",
+      "action": "Tôn trọng lựa chọn nghề nghiệp.",
+      "visible": true
+    }
+  ]
 }
