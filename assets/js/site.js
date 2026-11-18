@@ -97,6 +97,21 @@
       }
 
       if (home) {
+        if (home.headings) {
+          const h = home.headings;
+          const put = (selector, value) => setText(selector, value);
+          put('#hanh-trinh .section-heading .eyebrow', h.journey_eyebrow);
+          put('#hanh-trinh .section-heading h2', h.journey_title);
+          put('#hanh-trinh .section-heading p', h.journey_description);
+          put('#kham-pha .section-heading .eyebrow', h.doors_eyebrow);
+          put('#kham-pha .section-heading h2', h.doors_title);
+          put('#kham-pha .section-heading p', h.doors_description);
+          put('#infographic .section-heading .eyebrow', h.compare_eyebrow);
+          put('#infographic .section-heading h2', h.compare_title);
+          put('#infographic .section-heading p', h.compare_description);
+          put('#infographic .concept-heading h3', h.concepts_title);
+          put('#infographic .concept-heading p', h.concepts_description);
+        }
         const stepNodes = [...document.querySelectorAll('.steps .step-card')];
         (home.steps || []).forEach((item, index) => {
           const node = stepNodes[index]; if (!node) return;
