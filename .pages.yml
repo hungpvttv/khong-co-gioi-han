@@ -91,55 +91,63 @@ content:
 
   - name: legal_cards
     label: Thư viện pháp luật
-    type: collection
-    path: data/legal
-    filename: "{primary}.yml"
-    format: yaml
+    type: file
+    path: data/legal.json
+    format: json
     fields:
-      - name: title
-        label: Tiêu đề thẻ
-        type: string
-      - name: article
-        label: Điều luật
-        type: string
-      - name: summary
-        label: Diễn giải
-        type: text
-      - name: source_url
-        label: Liên kết văn bản gốc
-        type: string
-      - name: visible
-        label: Hiển thị
-        type: boolean
+      - name: cards
+        label: Danh sách thẻ pháp luật
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Tiêu đề thẻ
+            type: string
+          - name: article
+            label: Điều luật
+            type: string
+          - name: summary
+            label: Diễn giải
+            type: text
+          - name: source_url
+            label: Liên kết văn bản gốc
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
 
   - name: quiz_questions
     label: Câu hỏi trắc nghiệm
-    type: collection
-    path: data/quiz
-    filename: "{primary}.yml"
-    format: yaml
+    type: file
+    path: data/quiz.json
+    format: json
     fields:
-      - name: question
-        label: Câu hỏi
-        type: text
-      - name: option_a
-        label: Phương án A
-        type: string
-      - name: option_b
-        label: Phương án B
-        type: string
-      - name: option_c
-        label: Phương án C
-        type: string
-      - name: correct
-        label: Đáp án đúng (A/B/C)
-        type: string
-      - name: explanation
-        label: Giải thích
-        type: text
-      - name: visible
-        label: Hiển thị
-        type: boolean
+      - name: questions
+        label: Bộ câu hỏi
+        type: object
+        list: true
+        fields:
+          - name: question
+            label: Câu hỏi
+            type: text
+          - name: option_a
+            label: Phương án A
+            type: string
+          - name: option_b
+            label: Phương án B
+            type: string
+          - name: option_c
+            label: Phương án C
+            type: string
+          - name: correct
+            label: Đáp án đúng (A/B/C)
+            type: string
+          - name: explanation
+            label: Giải thích
+            type: text
+          - name: visible
+            label: Hiển thị
+            type: boolean
 
   - name: family_article
     label: Bài viết gia đình
@@ -165,26 +173,30 @@ content:
 
   - name: school_gallery
     label: Thư viện ảnh trường học
-    type: collection
-    path: data/gallery
-    filename: "{primary}.yml"
-    format: yaml
+    type: file
+    path: data/gallery.json
+    format: json
     fields:
-      - name: image
-        label: Ảnh
-        type: image
-      - name: caption
-        label: Chú thích
-        type: string
-      - name: alt
-        label: Mô tả ảnh
-        type: string
-      - name: order
-        label: Thứ tự
-        type: number
-      - name: visible
-        label: Hiển thị
-        type: boolean
+      - name: gallery
+        label: Danh sách ảnh
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Ảnh
+            type: image
+          - name: caption
+            label: Chú thích
+            type: string
+          - name: alt
+            label: Mô tả ảnh
+            type: string
+          - name: order
+            label: Thứ tự
+            type: number
+          - name: visible
+            label: Hiển thị
+            type: boolean
 
 settings:
   content:
