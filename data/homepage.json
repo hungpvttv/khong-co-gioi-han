@@ -18,5 +18,165 @@
     }
   ],
   "intro_title": "Không có giới hạn",
-  "intro_text": "Mỗi người đều có quyền khám phá sở thích, phát triển năng lực và theo đuổi ước mơ của riêng mình."
+  "intro_text": "Mỗi người đều có quyền khám phá sở thích, phát triển năng lực và theo đuổi ước mơ của riêng mình.",
+  "steps": [
+    {
+      "title": "NHẬN DIỆN",
+      "description": "Nhận ra định kiến quen thuộc",
+      "url": "#nhan-dien",
+      "cta": "Khám phá",
+      "visible": true
+    },
+    {
+      "title": "THẤU HIỂU",
+      "description": "Hiểu tác động và cơ hội công bằng",
+      "url": "#hieu-dung",
+      "cta": "Tìm hiểu",
+      "visible": true
+    },
+    {
+      "title": "LỰA CHỌN",
+      "description": "Chọn cách ứng xử phù hợp",
+      "url": "#khuon-mau",
+      "cta": "Thử lựa chọn",
+      "visible": true
+    },
+    {
+      "title": "HÀNH ĐỘNG",
+      "description": "Thực hiện thử thách 7 ngày",
+      "url": "#hanh-dong",
+      "cta": "Bắt đầu",
+      "visible": true
+    },
+    {
+      "title": "LAN TỎA",
+      "description": "Chia sẻ thông điệp và phản hồi",
+      "url": "#hanh-dong",
+      "cta": "Cùng lan tỏa",
+      "visible": true
+    }
+  ],
+  "doors": [
+    {
+      "id": "nhan-dien",
+      "eyebrow": "CÁNH CỬA 1 · NHẬN DIỆN",
+      "title": "Mở cửa nhận thức",
+      "description": "Những lời nói tưởng chừng bình thường đôi khi vô tình tạo nên giới hạn trong suy nghĩ và lựa chọn. Hãy bắt đầu bằng việc nhận ra chúng.",
+      "link_label": "Đi đến 5 tình huống",
+      "link_url": "#khuon-mau",
+      "visible": true
+    },
+    {
+      "id": "hieu-dung",
+      "eyebrow": "CÁNH CỬA 2 · THẤU HIỂU",
+      "title": "Hiểu đúng về bình đẳng giới",
+      "description": "Bắt đầu từ những khái niệm nền tảng, nhận diện cách hiểu chưa đúng và nhìn rõ hơn về cơ hội phát triển bình đẳng.",
+      "link_label": "Khám phá trang kiến thức",
+      "link_url": "kien-thuc/",
+      "visible": true
+    },
+    {
+      "id": "khuon-mau",
+      "eyebrow": "CÁNH CỬA 3 · NHỮNG KHUÔN MẪU VÔ HÌNH",
+      "title": "Ai đã đặt giới hạn cho chúng ta?",
+      "description": "Một câu nói, một ánh nhìn hay lời nhận xét tưởng như vô tình cũng có thể khiến ai đó tự thu hẹp khả năng của mình.",
+      "link_label": "",
+      "link_url": "",
+      "visible": true
+    },
+    {
+      "id": "truong-hoc",
+      "eyebrow": "CÁNH CỬA 4 · TRƯỜNG HỌC",
+      "title": "Một ngôi trường không giới hạn",
+      "description": "Nơi mỗi học sinh được lắng nghe, khích lệ và có cơ hội tham gia phù hợp với năng lực, sở thích.",
+      "link_label": "",
+      "link_url": "",
+      "visible": true
+    },
+    {
+      "id": "gia-dinh",
+      "eyebrow": "CÁNH CỬA 5 · GIA ĐÌNH VÀ XÃ HỘI",
+      "title": "Bình đẳng bắt đầu từ gia đình và những điều gần gũi",
+      "description": "Ba câu chuyện minh họa: Bữa cơm của cả nhà; Ước mơ của Mai; Nam và những món ăn đầu tiên.",
+      "link_label": "Đọc bài viết đầy đủ",
+      "link_url": "gia-dinh/",
+      "visible": true
+    },
+    {
+      "id": "phap-luat",
+      "eyebrow": "CÁNH CỬA 6 · BẢO VỆ QUYỀN",
+      "title": "Pháp luật bảo vệ chúng ta",
+      "description": "Tìm hiểu những quy định về bình đẳng giới, quyền và trách nhiệm của mỗi người qua các thẻ pháp luật được diễn giải dễ hiểu.",
+      "link_label": "Mở thư viện pháp luật",
+      "link_url": "phap-luat/",
+      "visible": true
+    },
+    {
+      "id": "thu-thach",
+      "eyebrow": "CÁNH CỬA 7 · TỰ KIỂM TRA",
+      "title": "Bạn có đang định kiến?",
+      "description": "Thử sức với 10 câu hỏi tình huống để nhìn lại cách suy nghĩ và lựa chọn cách ứng xử phù hợp. Mỗi câu trả lời đều đi kèm phần giải thích.",
+      "link_label": "Vào trò chơi",
+      "link_url": "thu-thach/",
+      "visible": true
+    },
+    {
+      "id": "hanh-dong",
+      "eyebrow": "CÁNH CỬA 8 · HÀNH ĐỘNG VÀ LAN TỎA",
+      "title": "Cùng hành động và lan tỏa",
+      "description": "Thử thách 7 ngày giúp mỗi người bắt đầu từ một lời nói, một việc sẻ chia và một hành động tôn trọng mỗi ngày.",
+      "link_label": "Tham gia thử thách 7 ngày",
+      "link_url": "thu-thach-7-ngay/",
+      "visible": true
+    }
+  ],
+  "comparisons": [
+    {
+      "misconception": "Nam và nữ phải làm mọi việc giống hệt nhau",
+      "correct": "Tôn trọng khác biệt, tạo cơ hội công bằng.",
+      "visible": true
+    },
+    {
+      "misconception": "Bình đẳng là chỉ ưu tiên con gái",
+      "correct": "Không phân biệt đối xử; hỗ trợ phù hợp khi cần.",
+      "visible": true
+    },
+    {
+      "misconception": "Con trai không cần học việc nhà",
+      "correct": "Mọi thành viên đều có trách nhiệm chia sẻ.",
+      "visible": true
+    },
+    {
+      "misconception": "Nghề nghiệp có giới tính",
+      "correct": "Lựa chọn theo năng lực, sở thích và yêu cầu thực tế.",
+      "visible": true
+    }
+  ],
+  "concepts": [
+    {
+      "title": "Giới tính",
+      "description": "Những đặc điểm sinh học của nam và nữ; khác với vai trò, kỳ vọng xã hội.",
+      "visible": true
+    },
+    {
+      "title": "Giới",
+      "description": "Những đặc điểm, vị trí và vai trò của nam và nữ trong các mối quan hệ xã hội.",
+      "visible": true
+    },
+    {
+      "title": "Định kiến giới",
+      "description": "Cách nhìn nhận, đánh giá thiên lệch, tiêu cực về đặc điểm, vai trò, năng lực của nam hoặc nữ.",
+      "visible": true
+    },
+    {
+      "title": "Bình đẳng giới",
+      "description": "Nam và nữ có vị trí, vai trò ngang nhau, có điều kiện và cơ hội phát huy năng lực, đóng góp và thụ hưởng thành quả phát triển.",
+      "visible": true
+    }
+  ],
+  "closing": {
+    "eyebrow": "KHÔNG CÓ GIỚI HẠN",
+    "title": "Mỗi ước mơ đều xứng đáng được tôn trọng.",
+    "description": "Phá bỏ khuôn mẫu, tự tin tỏa sáng."
+  }
 }
