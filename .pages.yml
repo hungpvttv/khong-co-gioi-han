@@ -465,6 +465,24 @@ content:
       - name: illustrative_note
         label: Ghi chú câu chuyện minh họa
         type: text
+      - name: story_label
+        label: Nhãn câu chuyện
+        type: string
+      - name: story_question_label
+        label: Nhãn câu hỏi gợi mở
+        type: string
+      - name: article_end_title
+        label: Tiêu đề kết bài
+        type: string
+      - name: article_end_text
+        label: Nội dung kết bài
+        type: text
+      - name: article_end_button_label
+        label: Chữ nút cuối bài
+        type: string
+      - name: article_end_button_url
+        label: Liên kết nút cuối bài
+        type: string
       - name: visible
         label: Hiển thị
         type: boolean
