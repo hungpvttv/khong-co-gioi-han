@@ -132,6 +132,16 @@
           if (paragraph && item.description) paragraph.textContent = item.description;
           const link = section.querySelector('.text-link, .feature-inner .button');
           if (link && item.link_label) { link.textContent = item.link_label + ' ↗'; if (item.link_url) link.href = String(item.link_url).startsWith('#') ? item.link_url : assetUrl(item.link_url); }
+          const note = section.querySelector('.illustrative-note');
+          if (note && item.note) note.textContent = item.note;
+          const secondary = section.querySelector('.share-copy');
+          if (secondary) {
+            const secondaryTitle = secondary.querySelector('h3'), secondaryText = secondary.querySelector('p');
+            if (secondaryTitle && item.secondary_title) secondaryTitle.textContent = item.secondary_title;
+            if (secondaryText && item.secondary_text) secondaryText.textContent = item.secondary_text;
+            const secondaryNote = secondary.querySelector('.illustrative-note');
+            if (secondaryNote && item.note) secondaryNote.textContent = item.note;
+          }
         });
         const compareNodes = [...document.querySelectorAll('.infographic-section .compare-card')];
         (home.comparisons || []).forEach((item, index) => {
