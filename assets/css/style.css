@@ -33,3 +33,38 @@
 .activity-gallery img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .activity-gallery figcaption{padding:10px 13px;font-size:13px;color:#53616c}
 @media(max-width:650px){.brand-logo{width:36px;height:36px}.activity-gallery{grid-template-columns:1fr}}
+
+/* Refinement: 5 touch cards */
+.step-no{font-size:13px;font-weight:800;opacity:.72}
+.step-icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font-size:36px;line-height:1;margin:8px 0 10px;transition:transform .28s ease,filter .28s ease}
+.icon-blue{color:#2588bd;background:#c9eafa}
+.icon-yellow{color:#b47a09;background:#f9e8a2}
+.icon-pink{color:#d45d79;background:#f8d0d9}
+.icon-mint{color:#26885d;background:#c9ecd8}
+.icon-lavender{color:#795bb9;background:#dfd4f7}
+.step-card:hover .step-icon{transform:rotate(-8deg) scale(1.12);filter:saturate(1.2)}
+/* Infographic cards: numbered markers without leading zero */
+.compare-mark{font-size:14px;font-weight:800;transition:transform .25s,background .25s,color .25s}
+.compare-card{position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.compare-card::after{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:#65b9e8;transform:scaleY(0);transform-origin:bottom;transition:transform .25s ease}
+.compare-card:nth-child(2)::after{background:#e6bd42}
+.compare-card:nth-child(3)::after{background:#e68aa0}
+.compare-card:nth-child(4)::after{background:#69bd91}
+.compare-card:hover{transform:translateY(-5px);box-shadow:0 13px 28px #26334216;border-color:#d8e8ee}
+.compare-card:hover::after{transform:scaleY(1)}
+.compare-card:hover .compare-mark{transform:rotate(-7deg) scale(1.08);background:#263342;color:white}
+/* Concept cards: icon, hover and open states */
+.concept-card{border:1px solid #00000008;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.concept-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px #26334214}
+.concept-card[open]{box-shadow:0 10px 24px #26334212;border-color:#ffffff}
+.concept-card summary{align-items:center}
+.concept-title{display:inline-flex;align-items:center;gap:10px}
+.concept-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:#ffffffb8;font-size:21px;line-height:1}
+.concept-plus{font-size:22px;line-height:1;transition:transform .25s ease}
+.concept-card[open] .concept-plus{transform:rotate(45deg)}
+.concept-action{text-align:center;margin-top:20px}
+.concept-action .text-link{margin-top:0;justify-content:center;padding:11px 18px;border:1px solid #c8e3f1;border-radius:999px;background:#f3faff;transition:transform .2s,background .2s}
+.concept-action .text-link:hover{transform:translateY(-2px);background:#e5f4fc}
+/* Remove the old numbered-door layout; the six feature stories now follow the section introduction */
+#kham-pha{padding-bottom:8px}
+@media(prefers-reduced-motion:reduce){.step-icon,.compare-card,.compare-card::after,.concept-card,.concept-plus,.concept-action .text-link{transition:none!important}}
