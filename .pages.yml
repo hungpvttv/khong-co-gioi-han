@@ -152,8 +152,8 @@ content:
   - name: family_article
     label: Bài viết gia đình
     type: file
-    path: data/family-article.yml
-    format: yaml
+    path: data/family-article.json
+    format: json
     fields:
       - name: title
         label: Tiêu đề
@@ -161,9 +161,27 @@ content:
       - name: sapo
         label: Sapo
         type: text
-      - name: body
-        label: Nội dung bài
+      - name: paragraphs
+        label: Các đoạn nội dung
         type: text
+        list: true
+      - name: stories
+        label: Ba câu chuyện minh họa
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Tên câu chuyện
+            type: string
+          - name: body
+            label: Nội dung
+            type: text
+          - name: message
+            label: Thông điệp
+            type: string
+          - name: question
+            label: Câu hỏi gợi mở
+            type: text
       - name: illustrative_note
         label: Ghi chú câu chuyện minh họa
         type: text
