@@ -1,0 +1,39 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "Không dùng một câu nói mang định kiến giới.",
+      "visible": true
+    },
+    {
+      "day": 2,
+      "title": "Chủ động chia sẻ một công việc gia đình phù hợp.",
+      "visible": true
+    },
+    {
+      "day": 3,
+      "title": "Động viên một người theo đuổi sở thích.",
+      "visible": true
+    },
+    {
+      "day": 4,
+      "title": "Tìm hiểu một nghề nghiệp thường bị gắn với khuôn mẫu giới.",
+      "visible": true
+    },
+    {
+      "day": 5,
+      "title": "Lắng nghe và tôn trọng ý kiến khác biệt.",
+      "visible": true
+    },
+    {
+      "day": 6,
+      "title": "Chia sẻ một thông điệp tích cực về bình đẳng giới.",
+      "visible": true
+    },
+    {
+      "day": 7,
+      "title": "Nhìn lại một suy nghĩ hoặc hành động mình muốn thay đổi.",
+      "visible": true
+    }
+  ]
+}
