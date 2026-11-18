@@ -28,7 +28,7 @@ fetch('../data/family-article.json').then(r=>r.ok?r.json():Promise.reject()).the
    if(heroSrc){let img=hero.querySelector('img');if(!img){img=document.createElement('img');hero.append(img);}img.src=heroSrc;img.alt=data.hero_alt||'';hero.hidden=false;}
    else hero.hidden=true;
  }
- let anchor=hero;
+ let anchor=hero;let storyNumber=0;
  const blocks=Array.isArray(data.blocks)?data.blocks:[];
  if(blocks.length){
   blocks.forEach((block,index)=>{
@@ -36,11 +36,12 @@ fetch('../data/family-article.json').then(r=>r.ok?r.json():Promise.reject()).the
    switch(block.type){
     case 'paragraph': el=document.createElement('p');el.className='family-content-block';el.textContent=block.text||'';break;
     case 'heading': el=document.createElement('h2');el.className='family-content-block';el.textContent=block.heading||'';break;
-    case 'image': el=makeImage(block.image,block.alt,block.caption);el.classList.add('family-content-block');break;
+    case 'image': if(block.image){el=makeImage(block.image,block.alt,block.caption);el.classList.add('family-content-block');}break;
     case 'quote': el=document.createElement('blockquote');el.className='family-content-block family-editor-quote';el.textContent=block.quote||'';break;
     case 'story':
+      storyNumber++;
       el=document.createElement('section');el.className='story-card family-content-block';
-      addText(el,'span','CÂU CHUYỆN MINH HỌA '+String(index).padStart(2,'0'),'eyebrow');
+      addText(el,'span','CÂU CHUYỆN MINH HỌA '+String(storyNumber).padStart(2,'0'),'eyebrow');
       addText(el,'h2',block.story_title);
       addText(el,'p',block.story_body);
       if(block.image)el.append(makeImage(block.image,block.alt,block.caption));
