@@ -1,0 +1,18 @@
+{
+  "gallery": [
+    {
+      "image": "/assets/images/hoat-dong-1.webp",
+      "caption": "Cùng học hỏi, trao đổi và khám phá khả năng của bản thân",
+      "alt": "Học sinh cùng giáo viên trao đổi trong hoạt động tại trường",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/hoat-dong-2.webp",
+      "caption": "Chủ động tham gia, tự tin thể hiện ý tưởng",
+      "alt": "Học sinh tham gia hoạt động học tập tại thư viện",
+      "order": 2,
+      "visible": true
+    }
+  ]
+}
