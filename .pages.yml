@@ -669,6 +669,12 @@ content:
           - name: progress_title
             label: Tiêu đề tiến độ
             type: string
+          - name: day_label
+            label: Nhãn ngày
+            type: string
+          - name: completion_label
+            label: Nhãn số ngày hoàn thành
+            type: string
           - name: pledge_title
             label: Tiêu đề tuyên ngôn
             type: string
