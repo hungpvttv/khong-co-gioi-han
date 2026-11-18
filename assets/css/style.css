@@ -129,3 +129,6 @@ footer .share-wrap{margin-left:auto}
 .family-inline-figure img{display:block;width:100%;height:auto;max-height:680px;object-fit:contain;border-radius:14px;}
 .family-inline-figure figcaption{margin-top:8px;color:#6b7b86;font-size:14px;line-height:1.5;text-align:center;}
 .family-editor-quote{margin:22px 0;padding:16px 20px;border-left:4px solid #65b9e8;background:#f2f8fc;border-radius:0 12px 12px 0;font-weight:700;color:#405765;}
+
+.family-paragraph-block>p{font-size:16px;line-height:1.85;color:#42515d;margin:18px 0;}
+.family-paragraph-block .family-inline-figure{margin:20px 0 24px;}
