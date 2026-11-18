@@ -1,1 +1,0 @@
-GitHub write access check for the KHÔNG CÓ GIỚI HẠN website project.
