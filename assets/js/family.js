@@ -6,7 +6,7 @@
   // resolve them against the project root rather than the current subfolder.
   const resolveMedia = (value) => {
     if (!value) return '';
-    const clean = String(value).trim().replace(/^\\/+/, '');
+    const clean = String(value).trim().replace(/^\/+/, '');
     try {
       return new URL(clean, new URL('../', document.baseURI)).href;
     } catch {
