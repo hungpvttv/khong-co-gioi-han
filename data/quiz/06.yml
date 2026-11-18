@@ -1,0 +1,7 @@
+question: "Nghe câu nói “Con gái không giỏi toán”?"
+option_a: "Giải thích không thể đánh giá theo giới"
+option_b: "Đồng ý"
+option_c: "Khuyên bỏ toán"
+correct: "A"
+explanation: "Năng lực cá nhân không thể suy ra từ giới tính."
+visible: true
