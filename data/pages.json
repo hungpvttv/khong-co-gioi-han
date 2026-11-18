@@ -1,0 +1,115 @@
+{
+  "knowledge": {
+    "eyebrow": "CHƯƠNG 02 · THẤU HIỂU",
+    "title": "Không phải ai cũng giống ai, mà ai cũng xứng đáng có cơ hội",
+    "lead": "Bình đẳng giới không có nghĩa là tất cả mọi người phải giống nhau về tính cách, sở thích hay lựa chọn. Điều quan trọng là không ai bị đánh giá thấp, bị loại trừ hoặc bị hạn chế cơ hội chỉ vì giới tính.",
+    "paragraphs": [
+      "Có bao giờ bạn tự hỏi: Vì sao cùng thích một môn học, nhưng có bạn được khuyến khích theo đuổi, còn bạn khác lại bị ngăn cản chỉ vì là con trai hay con gái?",
+      "Một bạn nữ yêu thích bóng đá cần được tôn trọng. Một bạn nam đam mê nấu ăn cũng vậy. Trong học tập, mỗi học sinh cần được tạo điều kiện phát triển năng lực, thay vì bị định hướng cứng nhắc bởi quan niệm môn học hoặc nghề nghiệp nào đó chỉ dành cho một giới.",
+      "Bình đẳng giới bắt đầu từ cách chúng ta nhìn nhận người khác: tôn trọng sự khác biệt, đánh giá dựa trên năng lực và không áp đặt khuôn mẫu. Bình đẳng không làm chúng ta giống nhau. Bình đẳng giúp mỗi người có cơ hội trở thành phiên bản tốt nhất của chính mình."
+    ],
+    "concept_heading": "Bốn khái niệm cần biết",
+    "comparison_heading": "Bình đẳng giới không phải là…",
+    "note": "Khi đăng tải nội dung chính thức, đối chiếu phần khái niệm với Điều 5 Luật Bình đẳng giới trong văn bản hiện hành.",
+    "button_label": "Thử sức với 10 câu hỏi",
+    "button_url": "../thu-thach/",
+    "concepts": [
+      {
+        "title": "Giới tính",
+        "description": "Những đặc điểm sinh học của nam và nữ; khác với vai trò, kỳ vọng xã hội.",
+        "visible": true
+      },
+      {
+        "title": "Giới",
+        "description": "Những đặc điểm, vị trí và vai trò của nam và nữ trong các mối quan hệ xã hội.",
+        "visible": true
+      },
+      {
+        "title": "Định kiến giới",
+        "description": "Cách nhìn nhận, đánh giá thiên lệch, tiêu cực về đặc điểm, vai trò, năng lực của nam hoặc nữ.",
+        "visible": true
+      },
+      {
+        "title": "Bình đẳng giới",
+        "description": "Nam và nữ có vị trí, vai trò ngang nhau, có điều kiện và cơ hội phát huy năng lực, đóng góp và thụ hưởng thành quả phát triển.",
+        "visible": true
+      }
+    ],
+    "comparisons": [
+      {
+        "misconception": "Nam và nữ phải làm mọi việc giống hệt nhau",
+        "correct": "Tôn trọng khác biệt, tạo cơ hội công bằng.",
+        "visible": true
+      },
+      {
+        "misconception": "Bình đẳng là chỉ ưu tiên con gái",
+        "correct": "Không phân biệt đối xử; hỗ trợ phù hợp khi cần.",
+        "visible": true
+      },
+      {
+        "misconception": "Con trai không cần học việc nhà",
+        "correct": "Mọi thành viên đều có trách nhiệm chia sẻ.",
+        "visible": true
+      },
+      {
+        "misconception": "Nghề nghiệp có giới tính",
+        "correct": "Lựa chọn theo năng lực, sở thích và yêu cầu thực tế.",
+        "visible": true
+      }
+    ]
+  },
+  "legal": {
+    "eyebrow": "CHƯƠNG 06 · PHÁP LUẬT BẢO VỆ CHÚNG TA",
+    "title": "Bình đẳng giới không chỉ là điều tốt đẹp",
+    "lead": "Mỗi học sinh đều xứng đáng được tôn trọng, học tập và phát triển năng lực. Hiểu biết pháp luật giúp chúng ta tôn trọng quyền người khác, nhận diện hành vi không phù hợp và tìm hỗ trợ khi cần.",
+    "notice": "Nội dung dưới đây được diễn giải ngắn gọn dành cho học sinh. Khi cần áp dụng hoặc trích dẫn chính thức, hãy đọc toàn văn văn bản pháp luật tại nguồn được liên kết.",
+    "more_heading": "Tìm hiểu thêm",
+    "more_note": "Văn bản hợp nhất 45/VBHN-VPQH năm 2026 cập nhật sửa đổi có hiệu lực từ 01/07/2026. Cần kiểm tra lại tình trạng hiệu lực và điều khoản cụ thể trước mỗi lần tái sử dụng.",
+    "more_links": [
+      {
+        "label": "Nghị định 76/2026/NĐ-CP",
+        "description": " – sửa đổi quy định xử phạt vi phạm hành chính trong lĩnh vực bình đẳng giới.",
+        "url": "https://vanban.chinhphu.vn/?docid=217214&pageid=27160",
+        "visible": true
+      },
+      {
+        "label": "Nghị quyết 28/NQ-CP năm 2021",
+        "description": " – Chiến lược quốc gia về bình đẳng giới giai đoạn 2021–2030.",
+        "url": "https://vanban.chinhphu.vn/?docid=202742&pageid=27160",
+        "visible": true
+      }
+    ]
+  },
+  "quiz": {
+    "eyebrow": "CHƯƠNG 07 · TỰ KIỂM TRA",
+    "title": "Bạn có đang định kiến?",
+    "lead": "10 tình huống gần gũi để cùng suy nghĩ và lựa chọn cách ứng xử tôn trọng, công bằng hơn.",
+    "note": "Đây là hoạt động tìm hiểu kiến thức, không phải bài đánh giá tính cách hay thái độ. Điểm số không dùng để xếp loại hoặc gán nhãn người tham gia.",
+    "question_count_label": "Câu",
+    "score_label": "Điểm",
+    "next_label": "Tiếp theo",
+    "finish_label": "Xem kết quả",
+    "result_title": "Bạn đã hoàn thành câu hỏi!",
+    "retry_label": "Làm lại từ đầu",
+    "correct_label": "Chính xác!",
+    "incorrect_label": "Mình cùng tìm hiểu nhé!",
+    "excellent_result": "Bạn đã nắm được nhiều kiến thức quan trọng. Hãy tiếp tục lan tỏa cách nhìn tôn trọng và công bằng.",
+    "good_result": "Bạn đã có những hiểu biết nền tảng. Hãy xem lại phần giải thích và tiếp tục khám phá.",
+    "retry_result": "Mỗi câu hỏi là một cơ hội học hỏi. Hãy đọc lại phần giải thích và thử sức lần nữa nhé."
+  },
+  "challenge": {
+    "eyebrow": "CHƯƠNG 08 · HÀNH ĐỘNG VÀ LAN TỎA",
+    "title": "Thử thách 7 ngày – Việc nhỏ, thay đổi lớn",
+    "lead": "Thay đổi nhận thức là một hành trình. Hãy bắt đầu từ một lời nói, một việc sẻ chia và một hành động tôn trọng mỗi ngày.",
+    "progress_title": "Hành trình của bạn",
+    "pledge_title": "Tuyên ngôn học sinh",
+    "pledge_paragraphs": [
+      "Chúng mình tin rằng: Mỗi học sinh đều có giá trị riêng. Mỗi ước mơ đều xứng đáng được tôn trọng. Không ai nên bị giới hạn bởi khuôn mẫu về giới tính. Chúng mình lựa chọn lắng nghe thay vì phán xét, động viên thay vì chế giễu, sẻ chia thay vì áp đặt.",
+      "Chúng mình bắt đầu từ hành động nhỏ để xây dựng gia đình yêu thương, trường học bình đẳng và cộng đồng tôn trọng sự khác biệt."
+    ],
+    "pledge_label": "Tôi đồng ý lan tỏa thông điệp tôn trọng sự khác biệt.",
+    "note": "Tiến độ được lưu trên thiết bị bạn đang sử dụng. Website không yêu cầu họ tên, số điện thoại hay thông tin cá nhân để tham gia.",
+    "day_label": "Ngày",
+    "completion_label": "ngày hoàn thành"
+  }
+}

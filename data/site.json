@@ -1,0 +1,41 @@
+{
+  "name": "KHÔNG CÓ GIỚI HẠN",
+  "slogan": "Phá bỏ khuôn mẫu, tự tin tỏa sáng",
+  "description": "Không gian truyền thông số về bình đẳng giới dành cho học sinh.",
+  "logo": "/assets/images/logo.svg",
+  "favicon": "",
+  "menu": [
+    {
+      "label": "5 chạm",
+      "url": "#hanh-trinh",
+      "visible": true
+    },
+    {
+      "label": "Khám phá",
+      "url": "#kham-pha",
+      "visible": true
+    },
+    {
+      "label": "Kiến thức",
+      "url": "kien-thuc/",
+      "visible": true
+    },
+    {
+      "label": "Pháp luật",
+      "url": "phap-luat/",
+      "visible": true
+    },
+    {
+      "label": "Gia đình",
+      "url": "gia-dinh/",
+      "visible": true
+    },
+    {
+      "label": "Thử thách",
+      "url": "thu-thach/",
+      "visible": true
+    }
+  ],
+  "footer_title": "KHÔNG CÓ GIỚI HẠN",
+  "footer_text": "Không gian truyền thông giáo dục về bình đẳng giới."
+}

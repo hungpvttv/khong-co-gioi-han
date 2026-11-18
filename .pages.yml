@@ -4,37 +4,260 @@ media:
 
 content:
   - name: site
-    label: Cấu hình website
+    label: Nhận diện và điều hướng website
     type: file
-    path: data/site.yml
-    format: yaml
+    path: data/site.json
+    format: json
     fields:
       - name: name
-        label: Tên website
+        label: Tên thương hiệu
         type: string
       - name: slogan
         label: Slogan
         type: string
       - name: description
-        label: Mô tả
+        label: Mô tả website
+        type: text
+      - name: logo
+        label: Logo
+        type: image
+      - name: favicon
+        label: Favicon
+        type: image
+      - name: menu
+        label: Menu điều hướng (kéo thả để sắp xếp)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Tên mục
+            type: string
+          - name: url
+            label: Đường dẫn
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: footer_title
+        label: Tiêu đề chân trang
+        type: string
+      - name: footer_text
+        label: Nội dung chân trang
         type: text
 
   - name: homepage
-    label: Trang chủ
+    label: Trang chủ và ảnh hero
     type: file
-    path: data/homepage.yml
-    format: yaml
+    path: data/homepage.json
+    format: json
     fields:
+      - name: hero_eyebrow
+        label: Dòng dẫn đầu hero
+        type: string
+      - name: hero_title
+        label: Tiêu đề hero
+        type: string
+      - name: hero_slogan
+        label: Slogan hero
+        type: string
+      - name: hero_description
+        label: Mô tả hero
+        type: text
+      - name: hero_button
+        label: Chữ nút hero
+        type: string
+      - name: hero_button_url
+        label: Liên kết nút hero
+        type: string
+      - name: hero_slides
+        label: Ảnh trình chiếu (kéo thả để sắp xếp)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Ảnh {index}: {alt}"
+        fields:
+          - name: image
+            label: Ảnh banner
+            type: image
+          - name: alt
+            label: Mô tả ảnh
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
       - name: intro_title
         label: Tiêu đề giới thiệu
         type: string
       - name: intro_text
         label: Nội dung giới thiệu
         type: text
-      - name: hero_slides
-        label: Ảnh trình chiếu
-        type: image
+
+      - name: headings
+        label: Tiêu đề các khu vực trang chủ
+        type: object
+        fields:
+          - name: journey_eyebrow
+            label: Dòng dẫn hành trình
+            type: string
+          - name: journey_title
+            label: Tiêu đề hành trình
+            type: string
+          - name: journey_description
+            label: Mô tả hành trình
+            type: text
+          - name: doors_eyebrow
+            label: Dòng dẫn tám cánh cửa
+            type: string
+          - name: doors_title
+            label: Tiêu đề tám cánh cửa
+            type: string
+          - name: doors_description
+            label: Mô tả tám cánh cửa
+            type: text
+          - name: compare_eyebrow
+            label: Dòng dẫn kiến thức trực quan
+            type: string
+          - name: compare_title
+            label: Tiêu đề thẻ so sánh
+            type: string
+          - name: compare_description
+            label: Mô tả thẻ so sánh
+            type: text
+          - name: concepts_title
+            label: Tiêu đề khái niệm
+            type: string
+          - name: concepts_description
+            label: Mô tả khái niệm
+            type: text
+          - name: gallery_eyebrow
+            label: Dòng dẫn thư viện ảnh
+            type: string
+          - name: gallery_title
+            label: Tiêu đề thư viện ảnh
+            type: string
+          - name: gallery_description
+            label: Mô tả thư viện ảnh
+            type: text
+      - name: steps
+        label: Năm chạm (thẻ hành trình)
+        type: object
         list: true
+        fields:
+          - name: title
+            label: Tên chạm
+            type: string
+          - name: description
+            label: Mô tả
+            type: string
+          - name: url
+            label: Liên kết
+            type: string
+          - name: cta
+            label: Chữ kêu gọi
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: doors
+        label: Tám cánh cửa nội dung
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Mã khu vực (không tự ý đổi)
+            type: string
+          - name: eyebrow
+            label: Dòng dẫn
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: description
+            label: Nội dung
+            type: text
+          - name: link_label
+            label: Chữ liên kết
+            type: string
+          - name: link_url
+            label: Đường dẫn liên kết
+            type: string
+          - name: note
+            label: Ghi chú minh họa hoặc lưu ý
+            type: text
+          - name: secondary_title
+            label: Tiêu đề nội dung phụ
+            type: string
+          - name: secondary_text
+            label: Nội dung phụ
+            type: text
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: comparisons
+        label: Thẻ nhận diện cách hiểu chưa đúng
+        type: object
+        list: true
+        fields:
+          - name: misconception
+            label: Cách hiểu chưa đúng
+            type: string
+          - name: correct
+            label: Góc nhìn phù hợp
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: concepts
+        label: Bốn khái niệm cần biết
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Tên khái niệm
+            type: string
+          - name: description
+            label: Diễn giải
+            type: text
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: situations
+        label: Năm tình huống định kiến
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Câu hỏi tình huống
+            type: string
+          - name: context
+            label: Bối cảnh
+            type: text
+          - name: explanation
+            label: Giải mã
+            type: text
+          - name: action
+            label: Hành động
+            type: text
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: closing
+        label: Thông điệp cuối trang
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng dẫn
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: description
+            label: Nội dung
+            type: text
 
   - name: sections
     label: Tám nội dung
@@ -70,7 +293,10 @@ content:
       - name: days
         label: Các ngày thử thách
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Ngày {day}"
         fields:
           - name: day
             label: Ngày
@@ -98,10 +324,16 @@ content:
     path: data/legal.json
     format: json
     fields:
+      - name: source_label
+        label: Chữ liên kết văn bản gốc
+        type: string
       - name: cards
         label: Danh sách thẻ pháp luật
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
         fields:
           - name: title
             label: Tiêu đề thẻ
@@ -128,7 +360,10 @@ content:
       - name: questions
         label: Bộ câu hỏi
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
         fields:
           - name: question
             label: Câu hỏi
@@ -171,46 +406,95 @@ content:
         label: Mô tả ảnh đại diện
         type: string
       - name: blocks
-        label: Nội dung bài viết (có thể kéo thả để đổi vị trí)
-        type: object
+        label: Nội dung bài viết
+        type: block
         list: true
-        fields:
-          - name: type
-            label: Loại khối (paragraph / heading / image / quote / story)
-            type: string
-          - name: text
-            label: Nội dung đoạn văn
-            type: text
+        blockKey: type
+        blocks:
+          - name: paragraph
+            label: Đoạn văn
+            fields:
+              - name: text
+                label: Nội dung
+                type: text
+              - name: image
+                label: Ảnh kèm đoạn văn (không bắt buộc)
+                type: image
+              - name: alt
+                label: Mô tả ảnh
+                type: string
+              - name: caption
+                label: Chú thích ảnh
+                type: string
           - name: heading
             label: Tiêu đề phụ
-            type: string
+            fields:
+              - name: heading
+                label: Tiêu đề
+                type: string
           - name: image
             label: Ảnh minh họa
-            type: image
-          - name: alt
-            label: Mô tả ảnh
-            type: string
-          - name: caption
-            label: Chú thích ảnh
-            type: string
+            fields:
+              - name: image
+                label: Ảnh
+                type: image
+              - name: alt
+                label: Mô tả ảnh
+                type: string
+              - name: caption
+                label: Chú thích
+                type: string
           - name: quote
-            label: Trích dẫn / thông điệp
-            type: text
-          - name: story_title
-            label: Tên câu chuyện
-            type: string
-          - name: story_body
-            label: Nội dung câu chuyện
-            type: text
-          - name: story_message
-            label: Thông điệp câu chuyện
-            type: string
-          - name: story_question
-            label: Câu hỏi gợi mở
-            type: text
+            label: Trích dẫn
+            fields:
+              - name: quote
+                label: Nội dung trích dẫn
+                type: text
+          - name: story
+            label: Câu chuyện minh họa
+            fields:
+              - name: story_title
+                label: Tên câu chuyện
+                type: string
+              - name: story_body
+                label: Nội dung câu chuyện
+                type: text
+              - name: story_message
+                label: Thông điệp
+                type: text
+              - name: story_question
+                label: Câu hỏi gợi mở
+                type: text
+              - name: image
+                label: Ảnh câu chuyện (không bắt buộc)
+                type: image
+              - name: alt
+                label: Mô tả ảnh
+                type: string
+              - name: caption
+                label: Chú thích ảnh
+                type: string
       - name: illustrative_note
         label: Ghi chú câu chuyện minh họa
         type: text
+      - name: story_label
+        label: Nhãn câu chuyện
+        type: string
+      - name: story_question_label
+        label: Nhãn câu hỏi gợi mở
+        type: string
+      - name: article_end_title
+        label: Tiêu đề kết bài
+        type: string
+      - name: article_end_text
+        label: Nội dung kết bài
+        type: text
+      - name: article_end_button_label
+        label: Chữ nút cuối bài
+        type: string
+      - name: article_end_button_url
+        label: Liên kết nút cuối bài
+        type: string
       - name: visible
         label: Hiển thị
         type: boolean
@@ -224,7 +508,10 @@ content:
       - name: gallery
         label: Danh sách ảnh
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
         fields:
           - name: image
             label: Ảnh
@@ -241,6 +528,196 @@ content:
           - name: visible
             label: Hiển thị
             type: boolean
+
+  - name: subpage_text
+    label: Nội dung các trang con
+    type: file
+    path: data/pages.json
+    format: json
+    fields:
+      - name: knowledge
+        label: Trang Kiến thức
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: paragraphs
+            label: Các đoạn nội dung
+            type: text
+            list: true
+          - name: concept_heading
+            label: Tiêu đề khái niệm
+            type: string
+          - name: comparison_heading
+            label: Tiêu đề so sánh
+            type: string
+          - name: note
+            label: Ghi chú
+            type: text
+          - name: concepts
+            label: Các khái niệm
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Tên khái niệm
+                type: string
+              - name: description
+                label: Diễn giải
+                type: text
+              - name: visible
+                label: Hiển thị
+                type: boolean
+          - name: comparisons
+            label: Các thẻ so sánh
+            type: object
+            list: true
+            fields:
+              - name: misconception
+                label: Cách hiểu chưa đúng
+                type: string
+              - name: correct
+                label: Góc nhìn phù hợp
+                type: string
+              - name: visible
+                label: Hiển thị
+                type: boolean
+          - name: button_label
+            label: Chữ nút
+            type: string
+          - name: button_url
+            label: Liên kết nút
+            type: string
+      - name: legal
+        label: Trang Pháp luật
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: notice
+            label: Lưu ý
+            type: text
+          - name: more_heading
+            label: Tiêu đề tìm hiểu thêm
+            type: string
+          - name: more_note
+            label: Ghi chú cuối trang
+            type: text
+          - name: more_links
+            label: Liên kết văn bản tham khảo
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Tên văn bản
+                type: string
+              - name: description
+                label: Diễn giải
+                type: string
+              - name: url
+                label: Liên kết
+                type: string
+              - name: visible
+                label: Hiển thị
+                type: boolean
+      - name: quiz
+        label: Trang Trắc nghiệm
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: note
+            label: Lưu ý
+            type: text
+          - name: question_count_label
+            label: Nhãn số câu
+            type: string
+          - name: score_label
+            label: Nhãn điểm
+            type: string
+          - name: next_label
+            label: Nút tiếp theo
+            type: string
+          - name: finish_label
+            label: Nút xem kết quả
+            type: string
+          - name: result_title
+            label: Tiêu đề kết quả
+            type: string
+          - name: retry_label
+            label: Nút làm lại
+            type: string
+          - name: correct_label
+            label: Phản hồi đáp án đúng
+            type: string
+          - name: incorrect_label
+            label: Phản hồi khi chọn đáp án sai
+            type: string
+          - name: excellent_result
+            label: Thông điệp kết quả tốt
+            type: text
+          - name: good_result
+            label: Thông điệp kết quả khá
+            type: text
+          - name: retry_result
+            label: Thông điệp khuyến khích thử lại
+            type: text
+      - name: challenge
+        label: Trang Thử thách 7 ngày
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng chương
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: lead
+            label: Sapo
+            type: text
+          - name: progress_title
+            label: Tiêu đề tiến độ
+            type: string
+          - name: day_label
+            label: Nhãn ngày
+            type: string
+          - name: completion_label
+            label: Nhãn số ngày hoàn thành
+            type: string
+          - name: pledge_title
+            label: Tiêu đề tuyên ngôn
+            type: string
+          - name: pledge_paragraphs
+            label: Nội dung tuyên ngôn
+            type: text
+            list: true
+          - name: pledge_label
+            label: Nội dung xác nhận
+            type: string
+          - name: note
+            label: Lưu ý cuối trang
+            type: text
 
 settings:
   content:
