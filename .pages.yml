@@ -324,6 +324,9 @@ content:
     path: data/legal.json
     format: json
     fields:
+      - name: source_label
+        label: Chữ liên kết văn bản gốc
+        type: string
       - name: cards
         label: Danh sách thẻ pháp luật
         type: object
