@@ -1,6 +1,6 @@
 {
   "knowledge": {
-    "eyebrow": "CHƯƠNG 02 · THẤU HIỂU",
+    "eyebrow": "THẤU HIỂU",
     "title": "Không phải ai cũng giống ai, mà ai cũng xứng đáng có cơ hội",
     "lead": "Bình đẳng giới không có nghĩa là tất cả mọi người phải giống nhau về tính cách, sở thích hay lựa chọn. Điều quan trọng là không ai bị đánh giá thấp, bị loại trừ hoặc bị hạn chế cơ hội chỉ vì giới tính.",
     "paragraphs": [
@@ -59,7 +59,7 @@
     ]
   },
   "legal": {
-    "eyebrow": "CHƯƠNG 06 · PHÁP LUẬT BẢO VỆ CHÚNG TA",
+    "eyebrow": "PHÁP LUẬT BẢO VỆ CHÚNG TA",
     "title": "Bình đẳng giới không chỉ là điều tốt đẹp",
     "lead": "Mỗi học sinh đều xứng đáng được tôn trọng, học tập và phát triển năng lực. Hiểu biết pháp luật giúp chúng ta tôn trọng quyền người khác, nhận diện hành vi không phù hợp và tìm hỗ trợ khi cần.",
     "notice": "Nội dung dưới đây được diễn giải ngắn gọn dành cho học sinh. Khi cần áp dụng hoặc trích dẫn chính thức, hãy đọc toàn văn văn bản pháp luật tại nguồn được liên kết.",
@@ -81,7 +81,7 @@
     ]
   },
   "quiz": {
-    "eyebrow": "CHƯƠNG 07 · TỰ KIỂM TRA",
+    "eyebrow": "TỰ KIỂM TRA",
     "title": "Bạn có đang định kiến?",
     "lead": "10 tình huống gần gũi để cùng suy nghĩ và lựa chọn cách ứng xử tôn trọng, công bằng hơn.",
     "note": "Đây là hoạt động tìm hiểu kiến thức, không phải bài đánh giá tính cách hay thái độ. Điểm số không dùng để xếp loại hoặc gán nhãn người tham gia.",
@@ -98,7 +98,7 @@
     "retry_result": "Mỗi câu hỏi là một cơ hội học hỏi. Hãy đọc lại phần giải thích và thử sức lần nữa nhé."
   },
   "challenge": {
-    "eyebrow": "CHƯƠNG 08 · HÀNH ĐỘNG VÀ LAN TỎA",
+    "eyebrow": "HÀNH ĐỘNG VÀ LAN TỎA",
     "title": "Thử thách 7 ngày – Việc nhỏ, thay đổi lớn",
     "lead": "Thay đổi nhận thức là một hành trình. Hãy bắt đầu từ một lời nói, một việc sẻ chia và một hành động tôn trọng mỗi ngày.",
     "progress_title": "Hành trình của bạn",
