@@ -96,6 +96,94 @@ content:
         label: Nội dung giới thiệu
         type: text
 
+      - name: steps
+        label: Năm chạm (thẻ hành trình)
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Tên chạm
+            type: string
+          - name: description
+            label: Mô tả
+            type: string
+          - name: url
+            label: Liên kết
+            type: string
+          - name: cta
+            label: Chữ kêu gọi
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: doors
+        label: Tám cánh cửa nội dung
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Mã khu vực (không tự ý đổi)
+            type: string
+          - name: eyebrow
+            label: Dòng dẫn
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: description
+            label: Nội dung
+            type: text
+          - name: link_label
+            label: Chữ liên kết
+            type: string
+          - name: link_url
+            label: Đường dẫn liên kết
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: comparisons
+        label: Thẻ nhận diện cách hiểu chưa đúng
+        type: object
+        list: true
+        fields:
+          - name: misconception
+            label: Cách hiểu chưa đúng
+            type: string
+          - name: correct
+            label: Góc nhìn phù hợp
+            type: string
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: concepts
+        label: Bốn khái niệm cần biết
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Tên khái niệm
+            type: string
+          - name: description
+            label: Diễn giải
+            type: text
+          - name: visible
+            label: Hiển thị
+            type: boolean
+      - name: closing
+        label: Thông điệp cuối trang
+        type: object
+        fields:
+          - name: eyebrow
+            label: Dòng dẫn
+            type: string
+          - name: title
+            label: Tiêu đề
+            type: string
+          - name: description
+            label: Nội dung
+            type: text
+
   - name: sections
     label: Tám nội dung
     type: collection
