@@ -39,7 +39,7 @@ def build_block(page, rel):
     description = site.get("seo_description") if is_home else ""
     if not description:
         lead = re.search(
-            r"<p\b[^>]*class=['\"][^'\"]*article-lead[^'\"]*['\"][^>]*>(.*?)</p>",
+            r'<p\b[^>]*class="[^"]*article-lead[^"]*"[^>]*>(.*?)</p>',
             page,
             flags=re.I | re.S,
         )
