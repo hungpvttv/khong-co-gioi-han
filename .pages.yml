@@ -18,6 +18,21 @@ content:
       - name: description
         label: Mô tả website
         type: text
+      - name: site_url
+        label: Địa chỉ website chính thức (sau khi gắn tên miền riêng, cập nhật tại đây)
+        type: string
+      - name: seo_title
+        label: Tiêu đề SEO và chia sẻ trang chủ
+        type: string
+      - name: seo_description
+        label: Mô tả SEO và chia sẻ mạng xã hội
+        type: text
+      - name: social_image
+        label: Ảnh đại diện khi chia sẻ (khuyến nghị 1200 × 630 px)
+        type: image
+      - name: social_image_alt
+        label: Mô tả ảnh đại diện chia sẻ
+        type: string
       - name: logo
         label: Logo
         type: image
