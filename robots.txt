@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://hungpvttv.github.io/khong-co-gioi-han/sitemap.xml
+Sitemap: https://khongcogioihan.vn/sitemap.xml
