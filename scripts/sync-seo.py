@@ -77,7 +77,7 @@ marker = re.compile(
     flags=re.I | re.S,
 )
 legacy_description = re.compile(
-    r"<meta\s+name=['\"]description['\"]\s+content=['\"][^'\"]*['\"]\s*/?>",
+    r'<meta\s+name="description"\s+content="[^"]*"\s*/?>',
     flags=re.I,
 )
 
