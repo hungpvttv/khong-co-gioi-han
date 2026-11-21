@@ -28,7 +28,7 @@ def absolute(path):
 
 def plain_text(value):
     value = re.sub(r"<[^>]+>", " ", value or "")
-    return html.unescape(re.sub(r"\\s+", " ", value)).strip()
+    return html.unescape(re.sub(r"\s+", " ", value)).strip()
 
 def build_block(page, rel):
     is_home = rel == "index.html"
@@ -39,7 +39,7 @@ def build_block(page, rel):
     description = site.get("seo_description") if is_home else ""
     if not description:
         lead = re.search(
-            r'<p\\b[^>]*class=["\\'][^"\\']*article-lead[^"\\']*["\\'][^>]*>(.*?)</p>',
+            r"<p\b[^>]*class=['\"][^'\"]*article-lead[^'\"]*['\"][^>]*>(.*?)</p>",
             page,
             flags=re.I | re.S,
         )
@@ -70,14 +70,14 @@ def build_block(page, rel):
         f'<meta name="twitter:image" content="{esc(image)}">',
         "<!-- SEO-SOCIAL:END -->",
     ]
-    return "\\n".join(tags)
+    return "\n".join(tags)
 
 marker = re.compile(
-    r"\\s*<!-- SEO-SOCIAL:START -->.*?<!-- SEO-SOCIAL:END -->\\s*",
+    r"\s*<!-- SEO-SOCIAL:START -->.*?<!-- SEO-SOCIAL:END -->\s*",
     flags=re.I | re.S,
 )
 legacy_description = re.compile(
-    r'<meta\\s+name=["\\']description["\\']\\s+content=["\\'][^"\\']*["\\']\\s*/?>',
+    r"<meta\s+name=['\"]description['\"]\s+content=['\"][^'\"]*['\"]\s*/?>",
     flags=re.I,
 )
 
@@ -105,7 +105,7 @@ for file in html_files:
     else:
         page = re.sub(
             r"</head>",
-            f"<title>{html.escape(str(title or ''))}</title>\\n</head>",
+            f"<title>{html.escape(str(title or ''))}</title>\n</head>",
             page,
             count=1,
             flags=re.I,
@@ -115,11 +115,11 @@ for file in html_files:
     page = legacy_description.sub("", page)
     block = build_block(page, rel)
     if marker.search(page):
-        page = marker.sub("\\n" + block + "\\n", page)
+        page = marker.sub("\n" + block + "\n", page)
     else:
         if not re.search(r"</head>", page, flags=re.I):
             raise SystemExit(f"Missing </head> in {rel}; refusing to write incomplete metadata.")
-        page = re.sub(r"</head>", "\\n" + block + "\\n</head>", page, count=1, flags=re.I)
+        page = re.sub(r"</head>", "\n" + block + "\n</head>", page, count=1, flags=re.I)
 
     file.write_text(page, encoding="utf-8")
 
@@ -136,9 +136,9 @@ sitemap = [
 for url in pages:
     sitemap.append(f"  <url><loc>{html.escape(url)}</loc></url>")
 sitemap.append("</urlset>")
-(ROOT / "sitemap.xml").write_text("\\n".join(sitemap) + "\\n", encoding="utf-8")
+(ROOT / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
 (ROOT / "robots.txt").write_text(
-    f"User-agent: *\\nAllow: /\\nSitemap: {urljoin(base, 'sitemap.xml')}\\n",
+    f"User-agent: *\nAllow: /\nSitemap: {urljoin(base, 'sitemap.xml')}\n",
     encoding="utf-8",
 )
 print(f"Generated SEO metadata for {len(pages)} pages.")
