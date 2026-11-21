@@ -52,8 +52,6 @@ def build_block(page, rel):
         f'<meta property="og:url" content="{esc(canonical)}">',
         f'<meta property="og:image" content="{esc(image)}">',
         f'<meta property="og:image:alt" content="{esc(image_alt)}">',
-        '<meta property="og:image:width" content="1200">',
-        '<meta property="og:image:height" content="630">',
         '<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="twitter:title" content="{esc(title)}">',
         f'<meta name="twitter:description" content="{esc(description)}">',
