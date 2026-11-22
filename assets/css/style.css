@@ -132,3 +132,7 @@ footer .share-wrap{margin-left:auto}
 
 .family-paragraph-block>p{font-size:16px;line-height:1.85;color:#42515d;margin:18px 0;}
 .family-paragraph-block .family-inline-figure{margin:20px 0 24px;}
+
+
+/* Public page-view counter in the homepage footer */
+footer .public-page-views{font-weight:600;color:var(--ink)}

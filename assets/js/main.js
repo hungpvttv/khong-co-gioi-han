@@ -46,4 +46,41 @@
     start();
   }
   window.addEventListener('site:hero-updated', initSlider, { once: true });
+  // Public page-view counter (homepage only), loaded via Apps Script JSONP.
+  const counter = document.getElementById('public-page-views');
+  if (counter) {
+    const callbackName = 'renderPublicPageViews';
+    let settled = false;
+    let timeoutId;
+    const script = document.createElement('script');
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      window.clearTimeout(timeoutId);
+      script.remove();
+    };
+    window[callbackName] = data => {
+      finish();
+      if (data && data.ok === true && Number.isFinite(Number(data.views))) {
+        counter.textContent = 'Tổng lượt xem: ' + Number(data.views).toLocaleString('vi-VN');
+      } else {
+        counter.textContent = 'Tổng lượt xem: Chưa thể tải dữ liệu';
+      }
+      delete window[callbackName];
+    };
+    script.async = true;
+    script.src = 'https://script.google.com/macros/s/AKfycbzfQTmfEyRspfoETRMLXUVZ073d1oTlcAuW62bExvMiQm9tnBxmRJqjuDJIKNWzdlk1UA/exec?callback=' + callbackName;
+    script.onerror = () => {
+      finish();
+      counter.textContent = 'Tổng lượt xem: Chưa thể tải dữ liệu';
+      delete window[callbackName];
+    };
+    timeoutId = window.setTimeout(() => {
+      finish();
+      counter.textContent = 'Tổng lượt xem: Chưa thể tải dữ liệu';
+      delete window[callbackName];
+    }, 12000);
+    document.head.appendChild(script);
+  }
+
 })();
