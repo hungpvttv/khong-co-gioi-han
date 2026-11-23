@@ -136,3 +136,26 @@ footer .share-wrap{margin-left:auto}
 
 /* Public page-view counter in the homepage footer */
 footer .public-page-views{font-weight:600;color:var(--ink)}
+
+
+/* Mobile fix: prevent feature content and CMS images from overflowing */
+.feature-inner{min-width:0}
+.feature-inner>div{min-width:0}
+.feature-inner img,
+.feature-inner video{display:block;max-width:100%;height:auto}
+@media(max-width:650px){
+  .feature-inner{grid-template-columns:45px minmax(0,1fr)}
+}
+
+
+/* Responsive captions for images in feature and editorial content */
+.family-inline-figure figcaption,
+.activity-gallery figcaption{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+@media(max-width:650px){
+  .family-inline-figure figcaption{font-size:13px;line-height:1.5}
+  .activity-gallery figcaption{font-size:12px;line-height:1.5}
+}
