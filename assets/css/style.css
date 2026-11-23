@@ -136,3 +136,13 @@ footer .share-wrap{margin-left:auto}
 
 /* Public page-view counter in the homepage footer */
 footer .public-page-views{font-weight:600;color:var(--ink)}
+
+
+/* Mobile fix: prevent feature content and CMS images from overflowing */
+.feature-inner{min-width:0}
+.feature-inner>div{min-width:0}
+.feature-inner img,
+.feature-inner video{display:block;max-width:100%;height:auto}
+@media(max-width:650px){
+  .feature-inner{grid-template-columns:45px minmax(0,1fr)}
+}
