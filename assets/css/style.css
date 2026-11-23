@@ -146,3 +146,16 @@ footer .public-page-views{font-weight:600;color:var(--ink)}
 @media(max-width:650px){
   .feature-inner{grid-template-columns:45px minmax(0,1fr)}
 }
+
+
+/* Responsive captions for images in feature and editorial content */
+.family-inline-figure figcaption,
+.activity-gallery figcaption{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+@media(max-width:650px){
+  .family-inline-figure figcaption{font-size:13px;line-height:1.5}
+  .activity-gallery figcaption{font-size:12px;line-height:1.5}
+}
