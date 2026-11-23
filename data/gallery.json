@@ -2,16 +2,72 @@
   "gallery": [
     {
       "image": "/assets/images/hoat-dong-1.webp",
-      "caption": "Cùng học hỏi, trao đổi và khám phá khả năng của bản thân",
-      "alt": "Học sinh cùng giáo viên trao đổi trong hoạt động tại trường",
+      "caption": "Cô giáo Trần Thị Hiền và nhóm học sinh cùng xây dựng website",
+      "alt": "Cô giáo Trần Thị Hiền và nhóm học sinh cùng xây dựng website",
       "order": 1,
       "visible": true
     },
     {
-      "image": "/assets/images/hoat-dong-2.webp",
-      "caption": "Chủ động tham gia, tự tin thể hiện ý tưởng",
-      "alt": "Học sinh tham gia hoạt động học tập tại thư viện nhà trường",
+      "image": "/assets/images/2. Cô giáo Trần Thị Hiền cùng nhóm học sinh trao đổi, thảo luận về nội dung và các tính năng của website..webp",
+      "caption": "Cô giáo Trần Thị Hiền cùng nhóm học sinh trao đổi, thảo luận về nội dung và các tính năng của website.",
+      "alt": "Cô giáo Trần Thị Hiền cùng nhóm học sinh trao đổi, thảo luận về nội dung và các tính năng của website.",
       "order": 2,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/3-1.webp",
+      "caption": "Nhóm học sinh tích cực thảo luận, hoàn thiện nội dung và các hoạt động tương tác trên website.",
+      "alt": "Nhóm học sinh tích cực thảo luận, hoàn thiện nội dung và các hoạt động tương tác trên website.",
+      "order": 3,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/4.webp",
+      "caption": "Cô giáo Trần Thị Hiền giới thiệu và lan tỏa sáng kiến truyền thông số về bình đẳng giới tới các em học sinh.",
+      "alt": "Cô giáo Trần Thị Hiền giới thiệu và lan tỏa sáng kiến truyền thông số về bình đẳng giới tới các em học sinh.",
+      "order": 4,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/5.webp",
+      "caption": "Cô Trần Thị Hiền hướng dẫn học sinh tìm hiểu, truy cập và tương tác với website “Không có giới hạn - Phá bỏ khuôn mẫu, tự tin tỏa sáng”.",
+      "alt": "Cô Trần Thị Hiền hướng dẫn học sinh tìm hiểu, truy cập và tương tác với website “Không có giới hạn - Phá bỏ khuôn mẫu, tự tin tỏa sáng”.",
+      "order": 5,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/6.webp",
+      "caption": "Các em học sinh hào hứng tìm hiểu và trải nghiệm những tính năng tương tác trên website.",
+      "alt": "Các em học sinh hào hứng tìm hiểu và trải nghiệm những tính năng tương tác trên website.",
+      "order": 6,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/7.webp",
+      "caption": "Nhóm học sinh Nguyễn Bảo Linh, Vũ Thị Phương Linh và Lê Tuấn Minh trực tiếp giới thiệu, hướng dẫn các bạn truy cập và trải nghiệm website.",
+      "alt": "Nhóm học sinh Nguyễn Bảo Linh, Vũ Thị Phương Linh và Lê Tuấn Minh trực tiếp giới thiệu, hướng dẫn các bạn truy cập và trải nghiệm website.",
+      "order": 7,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/8.webp",
+      "caption": "Các thành viên nhóm dự thi tích cực tuyên truyền, lan tỏa thông điệp bình đẳng giới tới bạn bè trong nhà trường.",
+      "alt": "Các thành viên nhóm dự thi tích cực tuyên truyền, lan tỏa thông điệp bình đẳng giới tới bạn bè trong nhà trường.",
+      "order": 8,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/9.webp",
+      "caption": "Nhóm học sinh giới thiệu sáng kiến truyền thông số về bình đẳng giới trước toàn trường trong chương trình phát động hưởng ứng Tháng hành động vì bình đẳng giới năm 2026.",
+      "alt": "Nhóm học sinh giới thiệu sáng kiến truyền thông số về bình đẳng giới trước toàn trường trong chương trình phát động hưởng ứng Tháng hành động vì bình đẳng giới năm 2026.",
+      "order": 9,
+      "visible": true
+    },
+    {
+      "image": "/assets/images/10.webp",
+      "caption": "Lan tỏa thông điệp “Phá bỏ khuôn mẫu – Tự tin tỏa sáng” tới đông đảo cán bộ, giáo viên và học sinh toàn trường. Các em học sinh tích cực hưởng ứng Tháng hành động vì bình đẳng giới và phòng ngừa, ứng phó với bạo lực trên cơ sở giới năm 2026.",
+      "alt": "Lan tỏa thông điệp “Phá bỏ khuôn mẫu – Tự tin tỏa sáng” tới đông đảo cán bộ, giáo viên và học sinh toàn trường. Các em học sinh tích cực hưởng ứng Tháng hành động vì bình đẳng giới và phòng ngừa, ứng phó với bạo lực trên cơ sở giới năm 2026.",
+      "order": 10,
       "visible": true
     }
   ]
